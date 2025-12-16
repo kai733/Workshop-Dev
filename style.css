@@ -3,8 +3,255 @@ Theme Name: Workshop SAE
 Version: 1.0;
 Author: Kaï Djepaxhia
 */
+@font-face {
+  font-family: "Clash Grotesk";
+  src: local("Clash Grotesk"),
+    url("assets/fonts/ClashGrotesk-Variable.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Inter";
+  src: local("Inter"),
+    url("assets/fonts/Inter-VariableFont_opsz\,wght.ttf") format("truetype");
+}
+body {
+  font-family: "Clash Grotesk";
 
-.error404{
-    background-color: blue;
-    color: white;
+  h3 {
+    /* h3 */
+    font-family: "Clash Grotesk Variable";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%; /* 32px */
+  }
+
+  h2 {
+    /* h2 */
+    font-family: "Clash Grotesk Variable";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%; /* 48px */
+  }
+
+  p {
+    /* corps de txt */
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 27px */
+  }
+
+  h4 {
+    /* TINY inter */
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
+
+.error404 {
+  background-color: blue;
+  color: white;
+}
+
+.wrapper {
+  width: 1212px;
+  max-width: 100%;
+  padding: 0 64px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.button-1 {
+  display: flex;
+  padding: 9px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 25px;
+  background: #353535;
+  color: #faf5ef;
+  border: solid 1px #353535;
+  transition: all 0.2s ease-in-out;
+}
+
+.button-1:hover {
+  background: transparent;
+  color: #353535;
+  border: solid 1px #353535;
+}
+
+.button-2 {
+  display: flex;
+  padding: 9px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 25px;
+  background: #e7dccf;
+  color: #353535;
+  border: solid 1px #e7dccf;
+  transition: all 0.2s ease-in-out;
+}
+
+.button-2:hover {
+  background: transparent;
+  color: #e7dccf;
+  border: solid 1px #e7dccf;
+}
+
+.home {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #e7dccf;
+  color: #353535;
+  gap: 100px;
+
+  .intro-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+
+    .intro-card {
+      display: flex;
+      width: 416px;
+      height: 462px;
+      background: bottom/cover;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      border-radius: 10px;
+      text-align: center;
+      padding: 0 40px 30px 30px;
+
+      h3 {
+        color: #353535;
+        text-align: center;
+      }
+
+      label {
+        color: #e7dccf;
+        /* label */
+        font-family: "Clash Grotesk Variable";
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: 1.2px;
+        display: inline-flex;
+        padding: 0 5px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+      }
+    }
+
+    .intro-card:nth-child(1) {
+      label {
+        background: var(--violet, #8a38f5);
+      }
+    }
+    .intro-card:nth-child(2) {
+      height: 582px;
+
+      label {
+        background: var(--rouge, #cf2d3f);
+      }
+    }
+    .intro-card:nth-child(3) {
+      label {
+        background: var(--rose, #c52895);
+      }
+    }
+  }
+
+  .quiz {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2 {
+      color: #353535;
+      text-align: center;
+    }
+
+    p {
+      color: #353535;
+      text-align: center;
+    }
+
+    .question-card {
+      display: flex;
+      width: 416px;
+      padding: 50px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+      border-radius: 10px;
+      background: #353535;
+
+      h3 {
+        text-align: left;
+        color: #fff;
+        margin: 0;
+      }
+      .answer-list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 20px;
+        width: auto;
+      }
+      .answer {
+        display: flex;
+        width: auto;
+        height: 52px;
+        padding: 5px 31px 5px 12px;
+        align-items: center;
+        gap: 14px;
+        border-radius: 50px;
+        background: var(--blanc, #fff);
+
+        h4{
+            color: #353535;
+        }
+      }
+
+      .answer-label {
+        display: flex;
+        width: 35px;
+        height: 34px;
+        padding: 5px 5px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        flex-shrink: 0;
+        border-radius: 25px;
+        background: var(--bleu, #4169d2);
+
+        h4 {
+          color: var(--blanc, #fff);
+          text-align: center;
+          font-family: "Clash Grotesk Variable";
+          font-size: 28px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 100%; /* 28px */
+        }
+      }
+    }
+
+    .result {
+      display: none;
+    }
+  }
 }
