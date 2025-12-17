@@ -354,9 +354,7 @@ a {
 
 .agenda-wrapper {
   display: flex;
-  flex-direction: column;
-  width: 301px;
-  text-align: left;
+  justify-content: space-between;
 
   h2 {
     margin: 10px 0;
@@ -369,6 +367,101 @@ a {
 
   h5 {
     margin: 0;
+  }
+
+  .agenda-left {
+    display: flex;
+    flex-direction: column;
+    width: 301px;
+    text-align: left;
+  }
+
+  .agenda-right {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 50px;
+
+    .event-card {
+      display: flex;
+      gap: 40px;
+
+      .event-card-1 {
+        display: flex;
+        flex-direction: column;
+        max-width: 90px;
+        justify-content: center;
+        align-items: center;
+
+        .day,
+        .month {
+          font-size: 32px;
+          text-align: center;
+          font-family: "Clash Grotesk Variable";
+          font-style: normal;
+          font-weight: 700;
+          line-height: 32px;
+        }
+
+        .number {
+          font-size: 68px;
+          text-align: center;
+          font-family: "Clash Grotesk Variable";
+          font-style: normal;
+          font-weight: 700;
+          line-height: 50px;
+        }
+      }
+      .event-card-2 {
+        width: 344px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+
+        h3 {
+          margin-block: 0;
+        }
+
+        p {
+          font-family: Inter;
+          font-size: 15px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+      }
+      .event-card-3 {
+        width: 216px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        p {
+          font-family: Inter;
+          font-size: 15px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+
+        .event-hour{
+          display: flex;
+          gap: 10px;
+          align-items: flex-start;
+        }
+
+        img{
+          max-width: 18px;
+        }
+
+        .event-adress{
+          display: flex;
+          gap: 10px;
+          align-items: flex-start;
+        }
+      }
+    }
   }
 }
 

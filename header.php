@@ -37,6 +37,5 @@
         </div>
       </div>
     </div>
-    <pre><?php //var_dump($header); ?></pre>
   </header>
   <?php ?>

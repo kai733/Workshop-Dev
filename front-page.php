@@ -9,6 +9,45 @@ $blog = get_field(selector: "blog");
 $our_friends = get_field(selector: "our_friends");
 
 ?>
+
+<?php
+function get_formatted_date_html($date_string)
+{
+    // 1. Clean whitespace and split
+    $parts = preg_split('/\s+/', trim($date_string));
+
+    if (count($parts) < 3) {
+        return '';
+    }
+
+    // --- DAY ---
+    // Keep standard logic: First 3 chars + Dot (e.g. "Mercredi" -> "MER.")
+    $day_raw = mb_substr($parts[0], 0, 3, 'UTF-8');
+    $day = mb_strtoupper($day_raw, 'UTF-8') . '.';
+
+    // --- NUMBER ---
+    $number = $parts[1];
+
+    // --- MONTH (Smart Logic) ---
+    $month_raw = $parts[2];
+
+    // Check length: 
+    // If length is <= 4 (e.g. "Mai", "Juin", "Mars", "Août", or "Déc."), keep it FULL.
+    // If length is > 4 (e.g. "Janvier", "Octobre"), truncate to 3 chars + dot.
+    if (mb_strlen($month_raw, 'UTF-8') <= 4) {
+        $month = mb_strtoupper($month_raw, 'UTF-8');
+    } else {
+        $month = mb_strtoupper(mb_substr($month_raw, 0, 3, 'UTF-8'), 'UTF-8') . '.';
+    }
+
+    // Return HTML
+    return '<div class="day">' . $day . '</div>' .
+        '<div class="number">' . $number . '</div>' .
+        '<div class="month">' . $month . '</div>';
+}
+?>
+
+
 <?php // var_dump($introduction); ?>
 <div class="intro">
     <div class="wrapper intro-wrapper">
@@ -103,14 +142,50 @@ $our_friends = get_field(selector: "our_friends");
     <div class="wrapper">
         <div class="agenda-wrapper">
             <div class="agenda-left">
-                <?php echo $agenda["event"] ?>
-            </div>
-            <div class="agenda-right">
                 <h5><?php echo $agenda["section_title"] ?></h5>
                 <h2><?php echo $agenda["title"] ?></h2>
                 <p><?php echo $agenda["description"] ?></p>
                 <a class="button-1"
                     href="<?php echo $agenda["button"]["url"] ?>"><?php echo $agenda["button"]["title"] ?></a>
+            </div>
+            <div class="agenda-right">
+                <?php
+                $counter = 0;
+                ?>
+                <?php foreach ($agenda["event"] as $events):
+                    $postId = $events->ID;
+                    $description = get_field('event_description', $postId);
+                    $event_day = get_field('event_day', $postId);
+                    $event_start_hour = get_field('event_start_hour', $postId);
+                    $event_end_hour = get_field('event_end_hour', $postId);
+                    $event_place = get_field('event_place', $postId);
+                    $counter++;
+                    ?>
+                    <div class="event-card">
+                        <div class="event-card-1">
+                            <?php
+                            echo get_formatted_date_html($event_day);
+                            ?>
+                        </div>
+                        <div class="event-card-2">
+                            <h3><?php echo $events->post_title ?></h3>
+                            <p><?php echo $description ?></p>
+                        </div>
+                        <div class="event-card-3">
+                            <div class="event-hour">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/Group.svg"
+                                    alt="Icone heure">
+                                <p><?php echo $event_start_hour . "&nbsp;-" ?></p>
+                                <p><?php echo $event_end_hour ?></p>
+                            </div>
+                            <div class="event-adress">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/adress.svg"
+                                    alt="Icone adresse">
+                                <p><?php echo $event_place ?></p>
+                            </div>
+                        </div>
+                    </div>
+                <?php endforeach ?>
             </div>
         </div>
     </div>
@@ -137,7 +212,6 @@ $our_friends = get_field(selector: "our_friends");
                                 $categories = get_the_category($card->ID);
                                 if (!empty($categories)) {
                                     foreach ($categories as $cat) {
-                                        // We combine the slug and your custom class into one string
                                         echo '<label class="' . $cat->slug . ' my-custom-class">';
                                         echo $cat->name;
                                         echo '</label> ';
