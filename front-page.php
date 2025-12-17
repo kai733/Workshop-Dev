@@ -21,26 +21,32 @@ function get_formatted_date_html($date_string)
     }
 
     // --- DAY ---
-    // Keep standard logic: First 3 chars + Dot (e.g. "Mercredi" -> "MER.")
     $day_raw = mb_substr($parts[0], 0, 3, 'UTF-8');
     $day = mb_strtoupper($day_raw, 'UTF-8') . '.';
 
     // --- NUMBER ---
     $number = $parts[1];
 
-    // --- MONTH (Smart Logic) ---
-    $month_raw = $parts[2];
+    // --- MONTH ---
+    // 1. Remove any existing dots to get the pure word (e.g. "Déc." becomes "Déc")
+    $month_raw = str_replace('.', '', $parts[2]);
+    $month_clean = mb_strtolower($month_raw, 'UTF-8'); // Normalize to lowercase for comparison
 
-    // Check length: 
-    // If length is <= 4 (e.g. "Mai", "Juin", "Mars", "Août", or "Déc."), keep it FULL.
-    // If length is > 4 (e.g. "Janvier", "Octobre"), truncate to 3 chars + dot.
-    if (mb_strlen($month_raw, 'UTF-8') <= 4) {
-        $month = mb_strtoupper($month_raw, 'UTF-8');
+    // 2. Define which months should stay FULL (No dot)
+    // We check against lowercase versions
+    $full_months = ['mai', 'mars', 'juin', 'août', 'aout'];
+
+    if (in_array($month_clean, $full_months)) {
+        // Case 1: It's a short month -> Keep it full, uppercase, NO dot.
+        // "Juin" -> "JUIN"
+        $month = mb_strtoupper($month_clean, 'UTF-8');
     } else {
-        $month = mb_strtoupper(mb_substr($month_raw, 0, 3, 'UTF-8'), 'UTF-8') . '.';
+        // Case 2: It's a long month -> Cut to 3 chars + dot.
+        // "Janvier" -> "JAN."
+        // "Décembre" -> "DÉC."
+        $month = mb_strtoupper(mb_substr($month_clean, 0, 3, 'UTF-8'), 'UTF-8') . '.';
     }
 
-    // Return HTML
     return '<div class="day">' . $day . '</div>' .
         '<div class="number">' . $number . '</div>' .
         '<div class="month">' . $month . '</div>';

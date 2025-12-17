@@ -13,6 +13,7 @@ Author: Kaï Djepaxhia
   src: local("Inter"),
     url("assets/fonts/Inter-VariableFont_opsz\,wght.ttf") format("truetype");
 }
+
 body {
   font-family: "Clash Grotesk";
   padding: 0;
@@ -382,6 +383,24 @@ a {
     text-align: left;
     gap: 50px;
 
+    .event-card:nth-child(n + 1) {
+      .event-card-1 {
+        color: #cf2d3f;
+      }
+    }
+
+    .event-card:nth-child(n + 2) {
+      .event-card-1 {
+        color: #4169d2;
+      }
+    }
+
+    .event-card:nth-child(n + 3) {
+      .event-card-1 {
+        color: #c52895;
+      }
+    }
+
     .event-card {
       display: flex;
       gap: 40px;
@@ -445,17 +464,17 @@ a {
           line-height: normal;
         }
 
-        .event-hour{
+        .event-hour {
           display: flex;
           gap: 10px;
           align-items: flex-start;
         }
 
-        img{
+        img {
           max-width: 18px;
         }
 
-        .event-adress{
+        .event-adress {
           display: flex;
           gap: 10px;
           align-items: flex-start;

@@ -32,8 +32,6 @@
               <a
                 href="<?php echo 'https://www.google.com/maps/search/' . $footer["emanciper_adress"] ?>"><?php echo $footer["emanciper_adress"] ?></a>
             </div>
-
-
           </div>
           <div class="footer-4">
             <a href="<?php $footer["legal"]["url"] ?>"><?php echo $footer["legal"]["title"] ?></a>
