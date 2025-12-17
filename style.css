@@ -15,6 +15,8 @@ Author: Kaï Djepaxhia
 }
 body {
   font-family: "Clash Grotesk";
+  padding: 0;
+  margin: 0;
 
   h3 {
     /* h3 */
@@ -79,6 +81,10 @@ body {
   }
 }
 
+footer {
+  display: flex;
+}
+
 .error404 {
   background-color: blue;
   color: white;
@@ -98,6 +104,7 @@ a {
 
 .button-1 {
   font-family: "Clash Grotesk";
+  font-weight: 500;
   display: flex;
   padding: 9px 20px;
   justify-content: center;
@@ -119,6 +126,7 @@ a {
 
 .button-2 {
   font-family: "Clash Grotesk";
+  font-weight: 500;
   display: flex;
   padding: 9px 20px;
   justify-content: center;
@@ -444,18 +452,18 @@ a {
     width: 414px;
   }
 
-  .our-friends-middle{
+  .our-friends-middle {
     display: flex;
     gap: 60px;
     align-items: center;
 
-    img{
+    img {
       max-width: 140px;
       max-height: 140px;
     }
   }
 
-  .our-friends-right{
+  .our-friends-right {
     display: flex;
     align-items: center;
   }
@@ -466,5 +474,187 @@ a {
     font-style: normal;
     font-weight: 400;
     line-height: 150%; /* 27px */
+  }
+}
+
+.footer {
+  background: #fff;
+  height: 100%;
+  width: 100%;
+
+  .footer-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    .footer-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      p {
+        margin-block: 0;
+        color: #353535;
+        font-family: Inter;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+
+      a {
+        color: #353535;
+        font-family: Inter;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+
+      .footer-2,
+      .footer-3,
+      .footer-4 {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        img {
+          max-width: 26px;
+          max-height: 26px;
+        }
+
+        .line {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+        }
+
+        .footer-logos {
+          display: flex;
+          gap: 20px;
+          align-items: center;
+        }
+      }
+
+      .footer-1 {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        p {
+          max-width: 178px;
+        }
+        img {
+          max-width: 115px;
+        }
+      }
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: end;
+
+      p {
+        color: #7d7c7c;
+        text-align: center;
+        font-family: Inter;
+        font-size: 12px;
+        font-style: italic;
+        font-weight: 200;
+        line-height: normal;
+      }
+    }
+  }
+}
+
+.header {
+  background: #fff;
+
+  .header-wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    .header-left {
+      display: flex;
+      gap: 64px;
+    }
+
+    .header-right {
+      display: flex;
+    }
+  }
+
+  .header-1,
+  .header-2,
+  .header-3 {
+    display: flex;
+    align-items: center;
+
+    img {
+      max-width: 159px;
+    }
+  }
+
+  .header-2 {
+    gap: 30px;
+
+    a {
+      color: #353535;
+      font-family: "Clash Grotesk Variable";
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+
+    a:hover {
+      color: #4169d2;
+    }
+  }
+
+  .header-3 {
+    gap: 8px;
+  }
+
+  .header-3 a:nth-child(1) {
+    font-family: "Clash Grotesk";
+    font-weight: 500;
+    display: flex;
+    padding: 9px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 25px;
+    background: transparent;
+    color: #353535;
+    border: solid 1px #353535;
+    transition: all 0.2s ease-in-out;
+    width: fit-content;
+  }
+
+  .header-3 a:nth-child(1):hover {
+    color: #4169d2;
+    border: solid 1px #4169d2;
+  }
+
+  .header-3 a:nth-child(2) {
+    font-family: "Clash Grotesk";
+    font-weight: 500;
+    display: flex;
+    padding: 9px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 25px;
+    background: #353535;
+    color: #faf5ef;
+    border: solid 1px #353535;
+    transition: all 0.2s ease-in-out;
+    width: fit-content;
+  }
+
+  .header-3 a:nth-child(2):hover {
+    background: #4169d2;
+    color: #faf5ef;
+    border: solid 1px #4169d2;
   }
 }

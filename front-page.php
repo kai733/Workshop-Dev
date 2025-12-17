@@ -177,12 +177,8 @@ $our_friends = get_field(selector: "our_friends");
         </div>
     </div>
 </div>
-
-<pre><?php //var_dump($our_friends); ?></pre>
 <?php
 
 get_footer();
 
 ?>
-
-<?php ?>
