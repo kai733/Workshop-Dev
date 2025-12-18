@@ -27,34 +27,47 @@ function get_formatted_date_html($date_string)
     // --- NUMBER ---
     $number = $parts[1];
 
-    // --- MONTH ---
-    // 1. Remove any existing dots to get the pure word (e.g. "Déc." becomes "Déc")
-    $month_raw = str_replace('.', '', $parts[2]);
-    $month_clean = mb_strtolower($month_raw, 'UTF-8'); // Normalize to lowercase for comparison
+    // --- MONTH (Smart Logic) ---
+    $month_raw = str_replace('.', '', $parts[2]); // Remove dots
+    $month_clean = mb_strtolower($month_raw, 'UTF-8');
 
-    // 2. Define which months should stay FULL (No dot)
-    // We check against lowercase versions
     $full_months = ['mai', 'mars', 'juin', 'août', 'aout'];
 
     if (in_array($month_clean, $full_months)) {
-        // Case 1: It's a short month -> Keep it full, uppercase, NO dot.
-        // "Juin" -> "JUIN"
+        // Keep Full (Mai, Juin, Mars)
         $month = mb_strtoupper($month_clean, 'UTF-8');
     } else {
-        // Case 2: It's a long month -> Cut to 3 chars + dot.
-        // "Janvier" -> "JAN."
-        // "Décembre" -> "DÉC."
+        // Truncate (Jan., Fév., Déc.)
         $month = mb_strtoupper(mb_substr($month_clean, 0, 3, 'UTF-8'), 'UTF-8') . '.';
     }
 
-    return '<div class="day">' . $day . '</div>' .
-        '<div class="number">' . $number . '</div>' .
-        '<div class="month">' . $month . '</div>';
+    // --- YEAR (New) ---
+    // Check if the string has a 4th part (the year)
+    if (isset($parts[3])) {
+        $year = $parts[3];
+    } else {
+        // Fallback: If no year is in the string, use current year or leave empty
+        $year = date('Y');
+    }
+
+    // --- HTML STRUCTURE ---
+    // Use output buffering or concatenation to build the HTML
+    $html = '<div class="date_left">';
+    $html .= '<div class="day">' . $day . '</div>';
+    $html .= '<div class="number">' . $number . '</div>';
+    $html .= '<div class="month">' . $month . '</div>';
+    $html .= '</div>'; // Close Left
+
+    $html .= '<div class="date_right">';
+    $html .= '<div class="year">' . $year . '</div>';
+    $html .= '</div>'; // Close Right
+
+    return $html;
 }
 ?>
 
 
-<?php // var_dump($introduction); ?>
+
 <div class="intro">
     <div class="wrapper intro-wrapper">
         <?php foreach ($introduction["cards"] as $card): ?>

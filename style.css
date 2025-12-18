@@ -15,6 +15,7 @@ Author: Kaï Djepaxhia
 }
 
 body {
+  background: #e7dccf;
   font-family: "Clash Grotesk";
   padding: 0;
   margin: 0;
@@ -92,9 +93,9 @@ footer {
 }
 
 .wrapper {
-  width: 1212px;
+  width: 1276px;
   max-width: 100%;
-  padding: 0 64px;
+  padding: 0 32px;
   margin: 0 auto;
 }
 
@@ -148,19 +149,42 @@ a {
   cursor: pointer;
 }
 
+.button-3 {
+  font-family: "Clash Grotesk";
+  font-weight: 500;
+  display: flex;
+  padding: 9px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 25px;
+  background: transparent;
+  color: #353535;
+  border: solid 1px #353535;
+  transition: all 0.2s ease-in-out;
+  width: fit-content;
+}
+
+.button-3:hover {
+  background: #353535;
+  color: #e7dccf;
+  border: solid 1px #353535;
+  cursor: pointer;
+}
+
 .home {
   margin: 0;
   display: flex;
   flex-direction: column;
   background-color: #e7dccf;
   color: #353535;
-  gap: 100px;
 
   .intro-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 32px;
+    padding-bottom: 100px;
 
     .intro-card {
       display: flex;
@@ -208,6 +232,7 @@ a {
     flex-direction: column;
     align-items: center;
     background-color: #fff;
+    padding-bottom: 100px;
 
     h2 {
       color: #353535;
@@ -320,6 +345,8 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
 
   .about-left {
     display: flex;
@@ -356,6 +383,7 @@ a {
 .agenda-wrapper {
   display: flex;
   justify-content: space-between;
+  padding-bottom: 100px;
 
   h2 {
     margin: 10px 0;
@@ -411,6 +439,10 @@ a {
         max-width: 90px;
         justify-content: center;
         align-items: center;
+
+        .year {
+          display: none;
+        }
 
         .day,
         .month {
@@ -488,6 +520,7 @@ a {
   width: 100%;
   display: flex;
   flex-direction: column;
+  padding-bottom: 100px;
 
   .blog-top {
     width: 100%;
@@ -559,6 +592,7 @@ a {
 .wrapper-our-friends {
   display: flex;
   justify-content: space-between;
+  padding-bottom: 100px;
 
   .our-friends-left {
     width: 414px;
@@ -679,11 +713,17 @@ a {
 }
 
 .header {
-  background: #fff;
+  background-image: url("assets/img/header-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left bottom;
+  padding-bottom: 50px;
 
   .header-wrapper {
     display: flex;
     justify-content: space-between;
+    padding: 0 64px;
+    padding-bottom: 20px;
 
     .header-left {
       display: flex;
@@ -770,3 +810,349 @@ a {
     border: solid 1px #4169d2;
   }
 }
+
+.newsletter-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 100px;
+
+  .newsletter-left {
+    display: flex;
+    flex-direction: column;
+    width: 916px;
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      color: #353535;
+      font-family: Inter;
+      font-size: 13px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 110%; /* 14.3px */
+    }
+
+    .wpcf7 input[type="submit"] {
+      font-family: "Clash Grotesk";
+      font-weight: 500;
+      display: flex;
+      padding: 9px 20px;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      border-radius: 25px;
+      background: #353535;
+      color: #faf5ef;
+      border: solid 1px #353535;
+      transition: all 0.2s ease-in-out;
+      width: fit-content;
+    }
+
+    .wpcf7 input[type="submit"]:hover {
+      background: transparent;
+      color: #353535;
+      border: solid 1px #353535;
+      cursor: pointer;
+    }
+
+    .wpcf7 input[type="text"],
+    .wpcf7 input[type="email"],
+    .wpcf7 textarea {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 12px; /* Matches the rounded look in the image */
+      background-color: #fff; /* Ensures white background for inputs */
+      box-sizing: border-box; /* Ensures padding doesn't affect width */
+    }
+
+    p {
+      color: #353535;
+      font-family: Inter;
+      font-size: 13px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 110%; /* 14.3px */
+    }
+  }
+
+  .newsletter-right {
+    img {
+      width: 301.137px;
+      height: 240.909px;
+      transform: rotate(18.145deg);
+      aspect-ratio: 301.14/240.91;
+    }
+  }
+}
+
+.contact-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  h3 {
+    margin-block: 0;
+  }
+
+  .member-form {
+    display: flex;
+    flex-direction: column;
+
+    .member-form-top {
+      display: flex;
+      gap: 20px;
+    }
+
+    .wpcf7 input[type="submit"] { 
+      font-family: "Clash Grotesk";
+      font-weight: 500;
+      display: flex;
+      padding: 9px 20px;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      border-radius: 25px;
+      background: #353535;
+      color: #faf5ef;
+      border: solid 1px #353535;
+      transition: all 0.2s ease-in-out;
+      width: fit-content;
+    }
+
+    .wpcf7 input[type="submit"]:hover {
+      background: transparent;
+      color: #353535;
+      border: solid 1px #353535;
+      cursor: pointer;
+    }
+
+    /* --- Contact Form 7 Custom Layout CSS --- */
+    .cf7-custom-form-layout {
+      max-width: 600px;
+    }
+
+    /* Container for the three top columns */
+    .cf7-custom-form-layout .form-row-three-cols {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px; /* Space between the columns */
+      margin-bottom: 20px;
+    }
+
+    /* The individual columns */
+    .cf7-custom-form-layout .form-col {
+      flex: 1 1 30%; /* Allows columns to grow/shrink, taking up roughly 1/3 width */
+      min-width: 100px; /* Ensures they don't get too squashed on small screens */
+    }
+
+    /* Full width row spacing */
+    .cf7-custom-form-layout .form-row-full {
+      margin-bottom: 20px;
+    }
+
+    /* General styling for labels to sit above inputs */
+    .cf7-custom-form-layout label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 500;
+    }
+
+    /* Styling inputs and textareas to fill their container and have rounded corners */
+    .wpcf7 input[type="text"],
+    .wpcf7 input[type="email"],
+    .wpcf7 textarea {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 12px; /* Matches the rounded look in the image */
+      background-color: #fff; /* Ensures white background for inputs */
+      box-sizing: border-box; /* Ensures padding doesn't affect width */
+    }
+
+    /* Submit button container alignment */
+    .cf7-custom-form-layout .form-row-submit.right-aligned {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    /* Responsive adjustment for mobile */
+    @media (max-width: 768px) {
+      .cf7-custom-form-layout .form-row-three-cols {
+        flex-direction: column; /* Stack columns vertically on mobile */
+        gap: 10px;
+      }
+    }
+
+    p,
+    label {
+      color: #353535;
+      font-family: Inter;
+      font-size: 13px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 110%; /* 14.3px */
+      max-width: 400px;
+    }
+  }
+}
+
+.upcoming-events {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.past-events {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  .agenda-event-card{
+    flex-direction: row-reverse;
+  }
+}
+
+.agenda-event-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  .agenda-card-1 {
+    display: flex;
+
+    .date_left {
+      display: flex;
+      flex-direction: column;
+      max-width: 90px;
+      justify-content: center;
+      align-items: center;
+
+      .year {
+        display: none;
+      }
+
+      .day,
+      .month {
+        font-size: 32px;
+        text-align: center;
+        font-family: "Clash Grotesk Variable";
+        font-style: normal;
+        font-weight: 700;
+        line-height: 32px;
+      }
+
+      .number {
+        font-size: 68px;
+        text-align: center;
+        font-family: "Clash Grotesk Variable";
+        font-style: normal;
+        font-weight: 700;
+        line-height: 50px;
+      }
+    }
+    .date_right {
+      .year {
+        display: flex;
+        font-size: 32px;
+        text-align: center;
+        font-family: "Clash Grotesk Variable";
+        font-style: normal;
+        font-weight: 700;
+        line-height: 32px;
+        writing-mode: vertical-lr;
+        text-orientation: upright;
+        letter-spacing: -10px;
+        display: inline-block;
+      }
+    }
+  }
+
+  .agenda-card-2 {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+  }
+
+  .agenda-card-3 {
+    display: flex;
+    width: 304px;
+    height: 177px;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+  }
+
+  .agenda-card-4 {
+    width: 216px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    p {
+      font-family: Inter;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+
+    .event-hour {
+      display: flex;
+      gap: 10px;
+      align-items: flex-center;
+    }
+
+    img {
+      max-width: 18px;
+    }
+
+    .event-adress {
+      display: flex;
+      gap: 10px;
+      align-items: flex-center;
+    }
+  }
+
+  p {
+    color: #353535;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  h3 {
+    margin-block: 0;
+  }
+}
+
+.agenda-event-card:nth-child(n + 2) {
+    .agenda-card-1 {
+      color: #cf2d3f;
+    }
+  }
+
+.agenda-event-card:nth-child(n + 3) {
+  .agenda-card-1 {
+    color: #4169d2;
+  }
+}
+
+.agenda-event-card:nth-child(n + 4) {
+  .agenda-card-1 {
+    color: #c52895;
+  }
+}
+

@@ -10,29 +10,28 @@
 <body <?php body_class(); ?>>
   <header>
     <?php
-    $header = get_field(selector: "header");
+    $header = get_field("header", "options");
     ?>
     <div class="header">
-      <div class="wrapper">
-        <div class="header-wrapper">
-          <div class="header-left">
-            <div class="header-1">
-              <a href="<?php echo $header["emanciper_link"]["url"] ?>"><img
-                  src="<?php echo $header["emanciper_logo"]["url"] ?>"
-                  alt="<?php echo $header["emanciper_logo"]["alt"] ?>"></a>
-            </div>
-            <div class="header-2">
-              <?php foreach ($header["links_1"] as $link): ?>
-                <a href="<?php echo $link["page_link"]["url"] ?>"><?php echo $link["page_link"]["title"] ?></a>
-              <?php endforeach ?>
-            </div>
+      <div class="header-wrapper">
+        <div class="header-left">
+          <div class="header-1">
+            <a href="<?php echo $header["emanciper_link"] ?>">
+              <img src="<?php echo $header["emanciper_logo"]["url"] ?>"
+                alt="<?php echo $header["emanciper_logo"]["alt"] ?>">
+            </a>
           </div>
-          <div class="header-right">
-            <div class="header-3">
-              <?php foreach ($header["links_2"] as $link): ?>
-                <a href="<?php echo $link["page_link"]["url"] ?>"><?php echo $link["page_link"]["title"] ?></a>
-              <?php endforeach ?>
-            </div>
+          <div class="header-2">
+            <?php foreach ($header["links_1"] as $link): ?>
+              <a href="<?php echo $link["page_link"]["url"] ?>"><?php echo $link["page_link"]["title"] ?></a>
+            <?php endforeach ?>
+          </div>
+        </div>
+        <div class="header-right">
+          <div class="header-3">
+            <?php foreach ($header["links_2"] as $link): ?>
+              <a href="<?php echo $link["page_link"]["url"] ?>"><?php echo $link["page_link"]["title"] ?></a>
+            <?php endforeach ?>
           </div>
         </div>
       </div>

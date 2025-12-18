@@ -1,6 +1,6 @@
 <footer>
   <?php
-  $footer = get_field(selector: "footer");
+  $footer = get_field("footer", "options");
   ?>
   <?php dynamic_sidebar('footer-sidebar'); ?>
   <div class="footer">
