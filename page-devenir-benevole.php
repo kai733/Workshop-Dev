@@ -2,18 +2,23 @@
 
 get_header();
 
-$about = get_field("abou_content");
+$volunteer = get_field("volunteer");
+$volunteerTop = get_field("volunteer_top");
 ?>
 
 <div class="wrapper">
-    <div class="about">
-        <h2><?php echo single_post_title(); ?></h2>
-        <?php foreach ($about as $section): ?>
-            <div class="about-card">
-                <div class="about-card-left">
+    <div class="volunteer">
+        <div class="volunteer-top">
+            <h2><?php echo single_post_title(); ?></h2>
+            <p><?php echo $volunteerTop["description"] ?></p>
+        </div>
+        <h3><?php echo $volunteerTop["subtitle"] ?></h3>
+        <?php foreach ($volunteer as $section): ?>
+            <div class="volunteer-card">
+                <div class="volunteer-card-left">
                     <h3><?php echo $section["section_title"] ?></h3>
-                    <div class="about-card-p"><?php echo $section["section_description"] ?></div>
-                    <div class="about-card-links">
+                    <div class="volunteer-card-p"><?php echo $section["section_description"] ?></div>
+                    <div class="volunteer-card-links">
                         <a class="button-1"
                             href="<?php echo $section["link_1"]["url"] ?>"><?php echo $section["link_1"]["title"] ?></a>
                         <?php if ($section["link_2"]): ?>
@@ -22,7 +27,7 @@ $about = get_field("abou_content");
                         <?php endif ?>
                     </div>
                 </div>
-                <div class="about-card-right">
+                <div class="volunteer-card-right">
                     <img src="<?php echo $section["section_image"]["url"] ?>"
                         alt="<?php echo $section["section_image"]["alt"] ?>">
                 </div>
