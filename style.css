@@ -119,6 +119,7 @@ a {
   border: solid 1px #353535;
   transition: all 0.2s ease-in-out;
   width: fit-content;
+  text-decoration: none;
 }
 
 .button-1:hover {
@@ -141,6 +142,7 @@ a {
   border: solid 1px #e7dccf;
   transition: all 0.2s ease-in-out;
   width: fit-content;
+  text-decoration: none;
 }
 
 .button-2:hover {
@@ -164,6 +166,7 @@ a {
   border: solid 1px #353535;
   transition: all 0.2s ease-in-out;
   width: fit-content;
+  text-decoration: none;
 }
 
 .button-3:hover {
@@ -906,6 +909,10 @@ a {
     .member-form-top {
       display: flex;
       gap: 20px;
+    }
+
+    textarea {
+      resize: none;
     }
 
     .wpcf7 input[type="submit"] {
@@ -1720,5 +1727,121 @@ a {
         object-fit: cover;
       }
     }
+  }
+}
+
+.joinUsTop {
+  h5 {
+    color: #000;
+    font-family: "Clash Grotesk Variable";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-block: 0;
+    letter-spacing: 0;
+  }
+
+  p {
+    color: #000;
+    font-family: "Clash Grotesk Variable";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .joinUsTop-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+
+    a {
+      color: #000;
+      font-family: "Clash Grotesk Variable";
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      text-decoration-line: underline;
+      text-decoration-style: solid;
+      text-decoration-skip-ink: auto;
+      text-decoration-thickness: auto;
+      text-underline-offset: auto;
+      text-underline-position: from-font;
+    }
+
+    .joinUsTop-left {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      max-width: 415px;
+    }
+
+    .joinUsTop-right {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      max-width: 415px;
+    }
+  }
+
+  .joinUsTop-links {
+    display: flex;
+    gap: 30px;
+  }
+}
+
+.joinUsBottom {
+  label {
+    color: #353535;
+    font-family: Inter;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 110%; /* 14.3px */
+  }
+
+  .wpcf7 input[type="submit"] {
+    font-family: "Clash Grotesk";
+    font-weight: 500;
+    display: flex;
+    padding: 9px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 25px;
+    background: #353535;
+    color: #faf5ef;
+    border: solid 1px #353535;
+    transition: all 0.2s ease-in-out;
+    width: fit-content;
+  }
+
+  .wpcf7 input[type="submit"]:hover {
+    background: transparent;
+    color: #353535;
+    border: solid 1px #353535;
+    cursor: pointer;
+  }
+
+  .wpcf7 input[type="text"],
+  .wpcf7 input[type="email"],
+  .wpcf7 textarea {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 12px; /* Matches the rounded look in the image */
+    background-color: #fff; /* Ensures white background for inputs */
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+  }
+
+  p {
+    color: #353535;
+    font-family: Inter;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 110%; /* 14.3px */
   }
 }
