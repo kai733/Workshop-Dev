@@ -6,6 +6,9 @@ $ideas = get_field("ideas_content");
 ?>
 
 <div class="wrapper">
+    <div class="breadcrumb">
+        <?php get_breadcrumb(); ?>
+    </div>
     <div class="ideas">
         <h2><?php echo single_post_title(); ?></h2>
         <?php foreach ($ideas as $section): ?>

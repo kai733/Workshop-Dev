@@ -5,6 +5,9 @@ get_header();
 ?>
 
 <div class="wrapper">
+    <div class="breadcrumb">
+        <?php get_breadcrumb(); ?>
+    </div>
 
     <div class="blog-header">
         <h2>Parlons-en !</h2>

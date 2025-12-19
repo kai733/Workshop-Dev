@@ -6,6 +6,9 @@ $about = get_field("abou_content");
 ?>
 
 <div class="wrapper">
+    <div class="breadcrumb">
+        <?php get_breadcrumb(); ?>
+    </div>
     <div class="about">
         <h2><?php echo single_post_title(); ?></h2>
         <?php foreach ($about as $section): ?>

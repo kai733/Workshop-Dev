@@ -6,6 +6,9 @@ $offer = get_field("offer");
 ?>
 
 <div class="wrapper">
+    <div class="breadcrumb">
+        <?php get_breadcrumb(); ?>
+    </div>
     <div class="offer">
         <h2><?php echo single_post_title(); ?></h2>
         <?php foreach ($offer as $section): ?>

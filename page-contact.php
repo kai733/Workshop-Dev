@@ -9,6 +9,9 @@ $memberForm = get_field("member_form");
 
 <div class="newsletter">
     <div class="wrapper">
+        <div class="breadcrumb">
+            <?php get_breadcrumb(); ?>
+        </div>
         <div class="newsletter-wrapper">
             <div class="newsletter-left">
                 <h3><?php echo $newsletter["section_title"] ?></h3>

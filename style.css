@@ -91,7 +91,7 @@ body {
     gap: 10px;
   }
 
-  a{
+  a {
     color: blue;
     font-family: Inter;
     font-size: 18px;
@@ -100,7 +100,7 @@ body {
     line-height: 150%;
   }
 
-  ol{
+  ol {
     color: #353535;
     font-family: Inter;
     font-size: 18px;
@@ -109,7 +109,7 @@ body {
     line-height: 150%; /* 27px */
   }
 
-  ul{
+  ul {
     color: #353535;
     font-family: Inter;
     font-size: 18px;
@@ -124,7 +124,6 @@ footer {
 }
 
 .error404 {
-  background-color: blue;
   color: white;
 }
 
@@ -2243,4 +2242,21 @@ a {
 .post-return {
   display: flex;
   justify-content: center;
+}
+
+.breadcrumb {
+  padding: 10px 0;
+  font-size: 1rem;
+  color: #353535;
+  font-weight: 700;
+}
+
+.breadcrumb a {
+  color: #353535; 
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
 }

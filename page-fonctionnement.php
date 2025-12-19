@@ -6,6 +6,9 @@ $fonction = get_field("fonction");
 ?>
 
 <div class="wrapper">
+    <div class="breadcrumb">
+        <?php get_breadcrumb(); ?>
+    </div>
     <div class="fonction">
         <h2><?php echo single_post_title(); ?></h2>
         <?php foreach ($fonction as $section): ?>

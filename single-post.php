@@ -10,6 +10,9 @@ $file = get_field('post_file');
 ?>
 
 <div class="wrapper">
+    <div class="breadcrumb">
+        <?php get_breadcrumb(); ?>
+    </div>
     <h2><?php the_title(); ?></h2>
     <div class="single-post-wrapper">
         <div class="single-post-top">

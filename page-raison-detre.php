@@ -6,6 +6,9 @@ $reason = get_field("reason_living");
 ?>
 
 <div class="wrapper">
+    <div class="breadcrumb">
+        <?php get_breadcrumb(); ?>
+    </div>
     <div class="reason">
         <h2><?php echo single_post_title(); ?></h2>
         <?php foreach ($reason as $section): ?>

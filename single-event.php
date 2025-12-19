@@ -13,6 +13,9 @@ $place = get_field('event_place');
 ?>
 
 <div class="wrapper">
+    <div class="breadcrumb">
+        <?php get_breadcrumb(); ?>
+    </div>
     <h2><?php the_title(); ?></h2>
     <div class="single-event-wrapper">
         <div class="single-event-top">

@@ -17,6 +17,9 @@ $events = get_posts($arg);
 ?>
 
 <div class="wrapper">
+    <div class="breadcrumb">
+        <?php get_breadcrumb(); ?>
+    </div>
     <div class="upcoming-events">
         <h2>Prochains événements</h2>
         <?php

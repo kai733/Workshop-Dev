@@ -6,6 +6,9 @@ $manifest = get_field("manifest");
 ?>
 
 <div class="wrapper">
+    <div class="breadcrumb">
+        <?php get_breadcrumb(); ?>
+    </div>
     <div class="manifest">
         <h2><?php echo single_post_title(); ?></h2>
         <?php foreach ($manifest as $section): ?>

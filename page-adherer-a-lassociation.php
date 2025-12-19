@@ -8,6 +8,9 @@ $joinUsBottom = get_field("join_us_bottom");
 
 <div class="joinUsTop">
     <div class="wrapper">
+        <div class="breadcrumb">
+            <?php get_breadcrumb(); ?>
+        </div>
         <div class="joinUsTop-links">
             <a class="button-1"
                 href="<?php echo $joinUsTop["lien_1"]["url"] ?>"><?php echo $joinUsTop["lien_1"]["title"] ?></a>
