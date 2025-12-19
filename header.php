@@ -16,7 +16,7 @@
       <div class="header-wrapper">
         <div class="header-left">
           <div class="header-1">
-            <a href="<?php echo $header["emanciper_link"] ?>">
+            <a href="<?php echo $header["emanciper_link"]["url"] ?>">
               <img src="<?php echo $header["emanciper_logo"]["url"] ?>"
                 alt="<?php echo $header["emanciper_logo"]["alt"] ?>">
             </a>

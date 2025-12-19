@@ -40,6 +40,14 @@ body {
     line-height: 100%; /* 48px */
   }
 
+  h1 {
+    font-family: "Clash Grotesk Variable";
+    font-size: 54px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%; /* 48px */
+  }
+
   p {
     /* corps de txt */
     font-family: Inter;
@@ -81,6 +89,33 @@ body {
     justify-content: center;
     align-items: center;
     gap: 10px;
+  }
+
+  a{
+    color: blue;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+  }
+
+  ol{
+    color: #353535;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 27px */
+  }
+
+  ul{
+    color: #353535;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 27px */
   }
 }
 
@@ -208,7 +243,20 @@ a {
       }
 
       label {
+        text-transform: uppercase;
         color: #e7dccf;
+        font-family: "Clash Grotesk Variable";
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: 1.2px;
+        display: inline-flex;
+        padding: 0 5px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        background-color: #6c5ce7;
       }
     }
 
@@ -631,6 +679,7 @@ a {
   background: #fff;
   height: 100%;
   width: 100%;
+  margin-top: 50px;
 
   .footer-wrapper {
     display: flex;
@@ -1844,4 +1893,354 @@ a {
     font-weight: 400;
     line-height: 110%; /* 14.3px */
   }
+}
+
+.single-event-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+
+  .single-event-top {
+    display: flex;
+    align-self: center;
+
+    img {
+      border-radius: 10px;
+      max-width: 300px;
+      object-fit: cover;
+    }
+  }
+
+  h2 {
+    margin-block: 0;
+  }
+
+  .single-event-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+
+    .single-event-left {
+      display: flex;
+      flex-direction: column;
+      max-width: 600px;
+    }
+
+    .single-event-right {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 50px;
+
+      .event-day {
+        display: flex;
+        flex-direction: row;
+        max-width: 90px;
+        color: #cf2d3f;
+
+        .year {
+          display: none;
+        }
+
+        .day,
+        .month {
+          font-size: 32px;
+          text-align: center;
+          font-family: "Clash Grotesk Variable";
+          font-style: normal;
+          font-weight: 700;
+          line-height: 32px;
+        }
+
+        .number {
+          font-size: 68px;
+          text-align: center;
+          font-family: "Clash Grotesk Variable";
+          font-style: normal;
+          font-weight: 700;
+          line-height: 50px;
+        }
+      }
+      .date_right {
+        .year {
+          display: flex;
+          font-size: 32px;
+          text-align: center;
+          font-family: "Clash Grotesk Variable";
+          font-style: normal;
+          font-weight: 700;
+          line-height: 32px;
+          writing-mode: vertical-lr;
+          text-orientation: upright;
+          letter-spacing: -10px;
+          display: inline-block;
+        }
+      }
+
+      .single-event-info {
+        display: flex;
+        flex-direction: column;
+
+        .event-hour {
+          display: flex;
+          gap: 10px;
+          align-items: center;
+
+          img {
+            max-width: 18px;
+          }
+        }
+
+        .event-adress {
+          display: flex;
+          gap: 10px;
+          align-items: flex-center;
+          max-width: 216px;
+
+          img {
+            max-width: 18px;
+          }
+        }
+      }
+    }
+  }
+  .event-return {
+    align-self: center;
+  }
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 32px;
+}
+
+.blog-card {
+  background-color: #353535;
+  color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 40px;
+
+  h3 {
+    color: #e7dccf;
+    font-family: "Clash Grotesk Variable";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%; /* 32px */
+  }
+
+  p {
+    color: #e7dccf;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
+
+.blog-card-inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  .card-below-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+}
+
+.card-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.card-badges {
+  margin-bottom: 15px;
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+
+  .badge {
+    text-transform: uppercase;
+    color: #e7dccf;
+    font-family: "Clash Grotesk Variable";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 1.2px;
+    display: inline-flex;
+    padding: 0 5px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: #6c5ce7;
+  }
+
+  .economie {
+    background: var(--violet, #8a38f5);
+  }
+  .democratie {
+    background: var(--rouge, #cf2d3f);
+  }
+  .langage {
+    background: var(--violet, #c52895);
+  }
+}
+.card-image-wrapper {
+  width: 100%;
+  height: 168px;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 15px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.blog-card:nth-child(4) {
+  grid-column: 1 / -1;
+  background: #fff;
+
+  h3 {
+    color: #353535;
+    font-family: "Clash Grotesk Variable";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%; /* 32px */
+  }
+
+  p {
+    color: #353535;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
+
+.blog-card:nth-child(4) .blog-card-inner {
+  flex-direction: row;
+  gap: 30px;
+
+  .button-2 {
+    font-family: "Clash Grotesk";
+    font-weight: 500;
+    display: flex;
+    padding: 9px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 25px;
+    background: #353535;
+    color: #faf5ef;
+    border: solid 1px #353535;
+    transition: all 0.2s ease-in-out;
+    width: fit-content;
+    text-decoration: none;
+  }
+
+  .button-2:hover {
+    background: transparent;
+    color: #353535;
+    border: solid 1px #353535;
+  }
+}
+
+.blog-card:nth-child(4) .card-top {
+  width: 50%;
+  flex-shrink: 0;
+}
+
+.blog-card:nth-child(4) .card-image-wrapper {
+  height: 350px;
+  margin-bottom: 0;
+}
+
+.blog-card:nth-child(4) .card-content {
+  width: 50%;
+  padding-right: 20px;
+}
+
+.blog-card:nth-child(4) .card-below-image {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.pagination {
+  margin-top: 50px;
+  text-align: center;
+  width: 100%;
+  display: block;
+}
+
+.pagination .page-numbers {
+  font-family: "Clash Grotesk";
+  font-weight: 500;
+  display: inline-block;
+  padding: 9px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 25px;
+  background: transparent;
+  color: #353535;
+  border: solid 1px #353535;
+  transition: all 0.2s ease-in-out;
+  width: fit-content;
+  text-decoration: none;
+}
+
+.pagination .page-numbers.current {
+  background-color: #353535;
+  color: #faf5ef;
+}
+
+.pagination .page-numbers:hover {
+  background: #353535;
+  color: #faf5ef;
+  border: solid 1px #353535;
+}
+
+.single-post-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+
+  .single-post-top {
+    display: flex;
+    justify-content: space-between;
+
+    .post-description {
+      max-width: 500px;
+    }
+
+    .post-image {
+      img {
+        object-fit: cover;
+        height: 320px;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.post-return {
+  display: flex;
+  justify-content: center;
 }

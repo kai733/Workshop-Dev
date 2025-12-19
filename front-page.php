@@ -10,64 +10,6 @@ $our_friends = get_field(selector: "our_friends");
 
 ?>
 
-<?php
-function get_formatted_date_html($date_string)
-{
-    // 1. Clean whitespace and split
-    $parts = preg_split('/\s+/', trim($date_string));
-
-    if (count($parts) < 3) {
-        return '';
-    }
-
-    // --- DAY ---
-    $day_raw = mb_substr($parts[0], 0, 3, 'UTF-8');
-    $day = mb_strtoupper($day_raw, 'UTF-8') . '.';
-
-    // --- NUMBER ---
-    $number = $parts[1];
-
-    // --- MONTH (Smart Logic) ---
-    $month_raw = str_replace('.', '', $parts[2]); // Remove dots
-    $month_clean = mb_strtolower($month_raw, 'UTF-8');
-
-    $full_months = ['mai', 'mars', 'juin', 'août', 'aout'];
-
-    if (in_array($month_clean, $full_months)) {
-        // Keep Full (Mai, Juin, Mars)
-        $month = mb_strtoupper($month_clean, 'UTF-8');
-    } else {
-        // Truncate (Jan., Fév., Déc.)
-        $month = mb_strtoupper(mb_substr($month_clean, 0, 3, 'UTF-8'), 'UTF-8') . '.';
-    }
-
-    // --- YEAR (New) ---
-    // Check if the string has a 4th part (the year)
-    if (isset($parts[3])) {
-        $year = $parts[3];
-    } else {
-        // Fallback: If no year is in the string, use current year or leave empty
-        $year = date('Y');
-    }
-
-    // --- HTML STRUCTURE ---
-    // Use output buffering or concatenation to build the HTML
-    $html = '<div class="date_left">';
-    $html .= '<div class="day">' . $day . '</div>';
-    $html .= '<div class="number">' . $number . '</div>';
-    $html .= '<div class="month">' . $month . '</div>';
-    $html .= '</div>'; // Close Left
-
-    $html .= '<div class="date_right">';
-    $html .= '<div class="year">' . $year . '</div>';
-    $html .= '</div>'; // Close Right
-
-    return $html;
-}
-?>
-
-
-
 <div class="intro">
     <div class="wrapper intro-wrapper">
         <?php foreach ($introduction["cards"] as $card): ?>
@@ -223,26 +165,29 @@ function get_formatted_date_html($date_string)
                 </div>
             </div>
             <div class="blog-bottom">
-                <?php foreach ($blog["un_blog"] as $card): ?>
+                <?php foreach ($blog["un_blog"] as $card):
+                    $categories = get_the_category($card->ID);
+                    $description = get_field('description', $card->ID);
+                    $permalink = get_permalink($card->ID); // Better than guid
+                    ?>
                     <div class="blog-card">
                         <div class="blog-card-top">
                             <div class="blog-categories">
                                 <?php
-                                $categories = get_the_category($card->ID);
                                 if (!empty($categories)) {
                                     foreach ($categories as $cat) {
-                                        echo '<label class="' . $cat->slug . ' my-custom-class">';
-                                        echo $cat->name;
+                                        echo '<label class="' . esc_attr($cat->slug) . ' my-custom-class">';
+                                        echo esc_html($cat->name);
                                         echo '</label> ';
                                     }
                                 }
                                 ?>
                             </div>
-                            <h3><?php echo $card->post_title ?></h3>
-                            <p><?php echo $card->post_content ?></p>
+                            <h3><?php echo get_the_title($card->ID); ?></h3>
+                            <p><?php echo $description; ?></p>
                         </div>
                         <div class="blog-card-bottom">
-                            <a class="button-2" href="<?php echo $card->guid ?>">Creusons un peu</a>
+                            <a class="button-2" href="<?php echo esc_url($permalink); ?>">Creusons un peu</a>
                         </div>
                     </div>
                 <?php endforeach; ?>
