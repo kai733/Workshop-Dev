@@ -13,5 +13,5 @@
 ## Auteur
 
 Développé par **Kaï Djepaxhia**.
-Designé par **Alexis Zehr**, **Maïa Druart**, **Nathan Dunoyer**, **Fanchon Cuillerat**, **Clémentine Pelloux-Prayer** et **Adam Philippot**
+Designé par **Alexis Zehr**, **Maïa Druart**, **Nathan Dunoyer**, **Fanchon Cuillerat**, **Clémentine Pelloux-Prayer** et **Adam Philippot**.
 Version : 1.0
