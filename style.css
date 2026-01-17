@@ -8,6 +8,7 @@ Author: Kaï Djepaxhia
   src: local("Clash Grotesk"),
     url("assets/fonts/ClashGrotesk-Variable.ttf") format("truetype");
 }
+
 @font-face {
   font-family: "Inter";
   src: local("Inter"),
@@ -27,7 +28,8 @@ body {
     font-size: 32px;
     font-style: normal;
     font-weight: 700;
-    line-height: 100%; /* 32px */
+    line-height: 100%;
+    /* 32px */
     padding: 0;
   }
 
@@ -37,7 +39,8 @@ body {
     font-size: 48px;
     font-style: normal;
     font-weight: 700;
-    line-height: 100%; /* 48px */
+    line-height: 100%;
+    /* 48px */
   }
 
   h1 {
@@ -45,7 +48,8 @@ body {
     font-size: 54px;
     font-style: normal;
     font-weight: 700;
-    line-height: 100%; /* 48px */
+    line-height: 100%;
+    /* 48px */
   }
 
   p {
@@ -54,7 +58,8 @@ body {
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
-    line-height: 150%; /* 27px */
+    line-height: 150%;
+    /* 27px */
   }
 
   h4 {
@@ -106,7 +111,8 @@ body {
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
-    line-height: 150%; /* 27px */
+    line-height: 150%;
+    /* 27px */
   }
 
   ul {
@@ -115,7 +121,8 @@ body {
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
-    line-height: 150%; /* 27px */
+    line-height: 150%;
+    /* 27px */
   }
 }
 
@@ -264,6 +271,7 @@ a {
         background: var(--violet, #8a38f5);
       }
     }
+
     .intro-card:nth-child(2) {
       height: 582px;
 
@@ -271,6 +279,7 @@ a {
         background: var(--rouge, #cf2d3f);
       }
     }
+
     .intro-card:nth-child(3) {
       label {
         background: var(--rose, #c52895);
@@ -293,7 +302,7 @@ a {
       width: 100%;
       height: 100%;
       object-fit: contain;
-      z-index: 1;
+      z-index: -1;
     }
 
     .floating-img-bottom {
@@ -303,7 +312,7 @@ a {
       width: 100%;
       height: 100%;
       object-fit: contain;
-      z-index: 1;
+      z-index: -1;
     }
 
     h2 {
@@ -322,6 +331,7 @@ a {
       display: flex;
       box-sizing: border-box;
       width: 416px;
+      margin: 0 auto;
       padding: 50px;
       flex-direction: column;
       align-items: flex-start;
@@ -336,6 +346,7 @@ a {
         .next-btn {
           margin-left: auto;
         }
+
         .prev-btn {
           margin: right;
         }
@@ -346,6 +357,7 @@ a {
         color: #fff;
         margin: 0;
       }
+
       .answer-list {
         display: flex;
         flex-direction: column;
@@ -354,6 +366,7 @@ a {
         margin-bottom: 35px;
         width: auto;
       }
+
       .answer {
         padding: 0;
         border: none;
@@ -368,10 +381,15 @@ a {
         background: var(--blanc, #fff);
         box-sizing: border-box;
         cursor: pointer;
+        transition: all 0.2s ease-in-out;
 
         h4 {
           color: #353535;
         }
+      }
+
+      .answer.selected {
+        background: #e7dccf;
       }
 
       .answer-label {
@@ -394,16 +412,85 @@ a {
           font-size: 28px;
           font-style: normal;
           font-weight: 700;
-          line-height: 100%; /* 28px */
+          line-height: 100%;
+          /* 28px */
         }
       }
     }
+
     .result {
       display: none;
+      /* Default hidden, toggled to flex via JS */
+      width: 100%;
+      gap: 60px;
+      justify-content: center;
+      align-items: center;
+
+      .result-left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+
+        img {
+          width: 100%;
+          max-width: 400px;
+          height: auto;
+          mix-blend-mode: multiply;
+          aspect-ratio: 1/1;
+          object-fit: cover;
+          border-radius: 50%;
+        }
+
+        h2 {
+          text-align: left;
+          width: 100%;
+        }
+      }
+
+      .result-right {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        gap: 20px;
+        align-items: flex-start;
+        justify-content: center;
+
+        p {
+          text-align: left;
+          margin: 0;
+        }
+      }
+
+      @media (max-width: 900px) {
+        flex-direction: column;
+        gap: 30px;
+
+        .result-left,
+        .result-right {
+          width: 100%;
+          align-items: center;
+        }
+
+        .result-left h2 {
+          text-align: center;
+        }
+
+        .result-right {
+          align-items: center;
+
+          p {
+            text-align: center;
+          }
+        }
+      }
     }
+
     .question-card {
       display: none;
     }
+
     .active {
       display: flex;
 
@@ -413,6 +500,7 @@ a {
     }
   }
 }
+
 .about-wrapper {
   display: flex;
   justify-content: space-between;
@@ -535,6 +623,7 @@ a {
           line-height: 50px;
         }
       }
+
       .event-card-2 {
         width: 344px;
         display: flex;
@@ -554,6 +643,7 @@ a {
           line-height: normal;
         }
       }
+
       .event-card-3 {
         width: 216px;
         display: flex;
@@ -604,6 +694,7 @@ a {
       flex-direction: column;
       justify-content: flex-end;
     }
+
     .blog-top-right {
       display: flex;
       align-items: end;
@@ -638,6 +729,7 @@ a {
     h3 {
       color: #e7dccf;
     }
+
     p {
       color: #e7dccf;
       font-family: Inter;
@@ -646,6 +738,7 @@ a {
       font-weight: 400;
       line-height: normal;
     }
+
     label {
       color: #e7dccf;
     }
@@ -653,14 +746,17 @@ a {
     .economie {
       background: var(--violet, #8a38f5);
     }
+
     .democratie {
       background: var(--rouge, #cf2d3f);
     }
+
     .langage {
       background: var(--violet, #c52895);
     }
   }
 }
+
 .wrapper-our-friends {
   display: flex;
   justify-content: space-between;
@@ -691,7 +787,8 @@ a {
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
-    line-height: 150%; /* 27px */
+    line-height: 150%;
+    /* 27px */
   }
 }
 
@@ -773,6 +870,7 @@ a {
         p {
           max-width: 178px;
         }
+
         img {
           max-width: 115px;
         }
@@ -851,7 +949,7 @@ a {
     gap: 8px;
   }
 
-  .header-3 a:nth-child(1) {
+  .header-3 a:nth-of-type(1) {
     font-family: "Clash Grotesk";
     font-weight: 500;
     display: flex;
@@ -867,12 +965,12 @@ a {
     width: fit-content;
   }
 
-  .header-3 a:nth-child(1):hover {
+  .header-3 a:nth-of-type(1):hover {
     color: #4169d2;
     border: solid 1px #4169d2;
   }
 
-  .header-3 a:nth-child(2) {
+  .header-3 a:nth-of-type(2) {
     font-family: "Clash Grotesk";
     font-weight: 500;
     display: flex;
@@ -888,7 +986,7 @@ a {
     width: fit-content;
   }
 
-  .header-3 a:nth-child(2):hover {
+  .header-3 a:nth-of-type(2):hover {
     background: #4169d2;
     color: #faf5ef;
     border: solid 1px #4169d2;
@@ -916,7 +1014,8 @@ a {
       font-size: 13px;
       font-style: normal;
       font-weight: 400;
-      line-height: 110%; /* 14.3px */
+      line-height: 110%;
+      /* 14.3px */
     }
 
     .wpcf7 input[type="submit"] {
@@ -948,9 +1047,12 @@ a {
       width: 100%;
       padding: 12px;
       border: none;
-      border-radius: 12px; /* Matches the rounded look in the image */
-      background-color: #fff; /* Ensures white background for inputs */
-      box-sizing: border-box; /* Ensures padding doesn't affect width */
+      border-radius: 12px;
+      /* Matches the rounded look in the image */
+      background-color: #fff;
+      /* Ensures white background for inputs */
+      box-sizing: border-box;
+      /* Ensures padding doesn't affect width */
     }
 
     p {
@@ -959,7 +1061,8 @@ a {
       font-size: 13px;
       font-style: normal;
       font-weight: 400;
-      line-height: 110%; /* 14.3px */
+      line-height: 110%;
+      /* 14.3px */
     }
   }
 
@@ -1028,14 +1131,17 @@ a {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      gap: 20px; /* Space between the columns */
+      gap: 20px;
+      /* Space between the columns */
       margin-bottom: 20px;
     }
 
     /* The individual columns */
     .cf7-custom-form-layout .form-col {
-      flex: 1 1 30%; /* Allows columns to grow/shrink, taking up roughly 1/3 width */
-      min-width: 100px; /* Ensures they don't get too squashed on small screens */
+      flex: 1 1 30%;
+      /* Allows columns to grow/shrink, taking up roughly 1/3 width */
+      min-width: 100px;
+      /* Ensures they don't get too squashed on small screens */
     }
 
     /* Full width row spacing */
@@ -1057,9 +1163,12 @@ a {
       width: 100%;
       padding: 12px;
       border: none;
-      border-radius: 12px; /* Matches the rounded look in the image */
-      background-color: #fff; /* Ensures white background for inputs */
-      box-sizing: border-box; /* Ensures padding doesn't affect width */
+      border-radius: 12px;
+      /* Matches the rounded look in the image */
+      background-color: #fff;
+      /* Ensures white background for inputs */
+      box-sizing: border-box;
+      /* Ensures padding doesn't affect width */
     }
 
     /* Submit button container alignment */
@@ -1071,7 +1180,8 @@ a {
     /* Responsive adjustment for mobile */
     @media (max-width: 768px) {
       .cf7-custom-form-layout .form-row-three-cols {
-        flex-direction: column; /* Stack columns vertically on mobile */
+        flex-direction: column;
+        /* Stack columns vertically on mobile */
         gap: 10px;
       }
     }
@@ -1083,7 +1193,8 @@ a {
       font-size: 13px;
       font-style: normal;
       font-weight: 400;
-      line-height: 110%; /* 14.3px */
+      line-height: 110%;
+      /* 14.3px */
       max-width: 400px;
     }
   }
@@ -1143,6 +1254,7 @@ a {
         line-height: 50px;
       }
     }
+
     .date_right {
       .year {
         display: flex;
@@ -1257,7 +1369,8 @@ a {
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
-    line-height: 150%; /* 27px */
+    line-height: 150%;
+    /* 27px */
   }
 
   ul {
@@ -1267,7 +1380,8 @@ a {
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
-    line-height: 150%; /* 27px */
+    line-height: 150%;
+    /* 27px */
   }
 
   h4 {
@@ -1296,7 +1410,8 @@ a {
     font-size: 64px;
     font-style: normal;
     font-weight: 700;
-    line-height: 100%; /* 64px */
+    line-height: 100%;
+    /* 64px */
     margin-block: 0;
   }
 
@@ -1345,7 +1460,8 @@ a {
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
-    line-height: 150%; /* 27px */
+    line-height: 150%;
+    /* 27px */
   }
 
   ul {
@@ -1355,7 +1471,8 @@ a {
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
-    line-height: 150%; /* 27px */
+    line-height: 150%;
+    /* 27px */
   }
 
   h4 {
@@ -1384,7 +1501,8 @@ a {
     font-size: 64px;
     font-style: normal;
     font-weight: 700;
-    line-height: 100%; /* 64px */
+    line-height: 100%;
+    /* 64px */
     margin-block: 0;
   }
 
@@ -1429,7 +1547,8 @@ a {
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
-    line-height: 150%; /* 27px */
+    line-height: 150%;
+    /* 27px */
   }
 
   ul {
@@ -1439,7 +1558,8 @@ a {
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
-    line-height: 150%; /* 27px */
+    line-height: 150%;
+    /* 27px */
   }
 
   h4 {
@@ -1468,7 +1588,8 @@ a {
     font-size: 64px;
     font-style: normal;
     font-weight: 700;
-    line-height: 100%; /* 64px */
+    line-height: 100%;
+    /* 64px */
     margin-block: 0;
   }
 
@@ -1521,7 +1642,8 @@ a {
       font-size: 18px;
       font-style: normal;
       font-weight: 400;
-      line-height: 150%; /* 27px */
+      line-height: 150%;
+      /* 27px */
     }
 
     ul {
@@ -1530,7 +1652,8 @@ a {
       font-size: 18px;
       font-style: normal;
       font-weight: 400;
-      line-height: 150%; /* 27px */
+      line-height: 150%;
+      /* 27px */
     }
 
     h4 {
@@ -1559,7 +1682,8 @@ a {
       font-size: 64px;
       font-style: normal;
       font-weight: 700;
-      line-height: 100%; /* 64px */
+      line-height: 100%;
+      /* 64px */
       margin-block: 0;
     }
   }
@@ -1578,7 +1702,8 @@ a {
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
-    line-height: 150%; /* 27px */
+    line-height: 150%;
+    /* 27px */
   }
 
   ul {
@@ -1588,7 +1713,8 @@ a {
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
-    line-height: 150%; /* 27px */
+    line-height: 150%;
+    /* 27px */
   }
 
   h4 {
@@ -1617,7 +1743,8 @@ a {
     font-size: 64px;
     font-style: normal;
     font-weight: 700;
-    line-height: 100%; /* 64px */
+    line-height: 100%;
+    /* 64px */
     margin-block: 0;
   }
 
@@ -1662,7 +1789,8 @@ a {
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
-    line-height: 150%; /* 27px */
+    line-height: 150%;
+    /* 27px */
   }
 
   ul {
@@ -1672,7 +1800,8 @@ a {
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
-    line-height: 150%; /* 27px */
+    line-height: 150%;
+    /* 27px */
   }
 
   h4 {
@@ -1701,7 +1830,8 @@ a {
     font-size: 64px;
     font-style: normal;
     font-weight: 700;
-    line-height: 100%; /* 64px */
+    line-height: 100%;
+    /* 64px */
     margin-block: 0;
   }
 
@@ -1743,7 +1873,8 @@ a {
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
-    line-height: 150%; /* 27px */
+    line-height: 150%;
+    /* 27px */
   }
 
   ul {
@@ -1753,7 +1884,8 @@ a {
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
-    line-height: 150%; /* 27px */
+    line-height: 150%;
+    /* 27px */
   }
 
   h4 {
@@ -1782,7 +1914,8 @@ a {
     font-size: 64px;
     font-style: normal;
     font-weight: 700;
-    line-height: 100%; /* 64px */
+    line-height: 100%;
+    /* 64px */
     margin-block: 0;
   }
 
@@ -1879,7 +2012,8 @@ a {
     font-size: 13px;
     font-style: normal;
     font-weight: 400;
-    line-height: 110%; /* 14.3px */
+    line-height: 110%;
+    /* 14.3px */
   }
 
   .wpcf7 input[type="submit"] {
@@ -1911,9 +2045,12 @@ a {
     width: 100%;
     padding: 12px;
     border: none;
-    border-radius: 12px; /* Matches the rounded look in the image */
-    background-color: #fff; /* Ensures white background for inputs */
-    box-sizing: border-box; /* Ensures padding doesn't affect width */
+    border-radius: 12px;
+    /* Matches the rounded look in the image */
+    background-color: #fff;
+    /* Ensures white background for inputs */
+    box-sizing: border-box;
+    /* Ensures padding doesn't affect width */
   }
 
   p {
@@ -1922,7 +2059,8 @@ a {
     font-size: 13px;
     font-style: normal;
     font-weight: 400;
-    line-height: 110%; /* 14.3px */
+    line-height: 110%;
+    /* 14.3px */
   }
 }
 
@@ -1993,6 +2131,7 @@ a {
           line-height: 50px;
         }
       }
+
       .date_right {
         .year {
           display: flex;
@@ -2036,6 +2175,7 @@ a {
       }
     }
   }
+
   .event-return {
     align-self: center;
   }
@@ -2062,7 +2202,8 @@ a {
     font-size: 32px;
     font-style: normal;
     font-weight: 700;
-    line-height: 100%; /* 32px */
+    line-height: 100%;
+    /* 32px */
   }
 
   p {
@@ -2119,13 +2260,16 @@ a {
   .economie {
     background: var(--violet, #8a38f5);
   }
+
   .democratie {
     background: var(--rouge, #cf2d3f);
   }
+
   .langage {
     background: var(--violet, #c52895);
   }
 }
+
 .card-image-wrapper {
   width: 100%;
   height: 168px;
@@ -2150,7 +2294,8 @@ a {
     font-size: 32px;
     font-style: normal;
     font-weight: 700;
-    line-height: 100%; /* 32px */
+    line-height: 100%;
+    /* 32px */
   }
 
   p {
@@ -2306,7 +2451,8 @@ a {
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
-    line-height: 150%; /* 27px */
+    line-height: 150%;
+    /* 27px */
   }
 
   ul {
@@ -2316,7 +2462,8 @@ a {
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
-    line-height: 150%; /* 27px */
+    line-height: 150%;
+    /* 27px */
   }
 
   h4 {
@@ -2345,7 +2492,8 @@ a {
     font-size: 64px;
     font-style: normal;
     font-weight: 700;
-    line-height: 100%; /* 64px */
+    line-height: 100%;
+    /* 64px */
     margin-block: 0;
   }
 
@@ -2353,7 +2501,7 @@ a {
     flex-direction: row-reverse;
   }
 
-  .history-cards{
+  .history-cards {
     display: flex;
     flex-direction: column;
     gap: 100px;
@@ -2362,7 +2510,7 @@ a {
   .history-card {
     display: flex;
     align-items: center;
-    justify-content:space-between;
+    justify-content: space-between;
 
     .history-card-left {
       display: flex;
@@ -2387,7 +2535,7 @@ a {
   }
 }
 
-.cms{
+.cms {
   p {
     color: #353535;
     /* corps de txt */
@@ -2395,7 +2543,8 @@ a {
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
-    line-height: 150%; /* 27px */
+    line-height: 150%;
+    /* 27px */
   }
 
   ul {
@@ -2405,16 +2554,18 @@ a {
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
-    line-height: 150%; /* 27px */
+    line-height: 150%;
+    /* 27px */
   }
-  
+
   h1 {
     color: #353535;
     font-family: "Clash Grotesk Variable";
     font-size: 64px;
     font-style: normal;
     font-weight: 700;
-    line-height: 100%; /* 64px */
+    line-height: 100%;
+    /* 64px */
     margin-block: 0;
   }
 
@@ -2424,7 +2575,8 @@ a {
     font-size: 54px;
     font-style: normal;
     font-weight: 700;
-    line-height: 100%; /* 64px */
+    line-height: 100%;
+    /* 64px */
     margin-block: 0;
   }
 
@@ -2469,4 +2621,159 @@ a {
     margin-block: 0;
     letter-spacing: normal;
   }
+}
+
+/* Contact Page Refinements */
+.section-adress .adress-bottom {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.section-adress .adress-bottom img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.section-adress .adress-bottom p {
+  margin: 0;
+}
+
+.section-mail {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.section-mail h4 {
+  width: 100%;
+}
+
+.section-mail .section-mail-line img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.section-mail p {
+  margin: 0;
+}
+
+.section-socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: center;
+}
+
+.section-socials h4 {
+  width: 100%;
+}
+
+.section-socials a img {
+  width: 30px;
+  height: auto;
+  transition: transform 0.2s;
+}
+
+
+.section-socials a:hover img {
+  transform: scale(1.1);
+}
+
+/* Search Bar Styles */
+.header-3 {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  border: 1px solid #353535;
+  border-radius: 25px;
+  padding: 5px 15px;
+  background: white;
+  transition: all 0.3s ease;
+}
+
+.search-form:focus-within {
+  border-color: #4169d2;
+  box-shadow: 0 0 5px rgba(65, 105, 210, 0.3);
+}
+
+.search-field {
+  border: none;
+  outline: none;
+  background: transparent;
+  width: 150px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: #353535;
+}
+
+.search-submit {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  color: #353535;
+  transition: color 0.3s ease;
+}
+
+.search-submit:hover {
+  color: #4169d2;
+}
+
+.search-submit svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Search Results Page Styles */
+.search-section {
+  margin-bottom: 60px;
+}
+
+.search-section h2 {
+  font-family: "Clash Grotesk Variable";
+  color: #353535;
+  font-size: 48px;
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+/* Page List Styles */
+.search-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.search-section ul li {
+  margin-bottom: 10px;
+}
+
+.search-section ul li a {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  color: #353535;
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.search-section ul li a:hover {
+  background-color: #f5f5f5;
+  border-color: #353535;
 }

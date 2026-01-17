@@ -29,6 +29,16 @@
         </div>
         <div class="header-right">
           <div class="header-3">
+            <form role="search" method="get" class="search-form" action="<?php echo home_url('/'); ?>">
+              <input type="search" class="search-field" placeholder="Rechercher..." value="<?php echo get_search_query(); ?>" name="s" />
+              <button type="submit" class="search-submit">
+                <!-- SVG Icon for Search -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+              </button>
+            </form>
             <?php foreach ($header["links_2"] as $link): ?>
               <a href="<?php echo $link["page_link"]["url"] ?>"><?php echo $link["page_link"]["title"] ?></a>
             <?php endforeach ?>
