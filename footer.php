@@ -4,6 +4,8 @@
   ?>
   <?php dynamic_sidebar('footer-sidebar'); ?>
   <div class="footer">
+    <img class="floating-img-top" src="<?php echo get_template_directory_uri(); ?>/assets/img/haut.png"
+      alt="Texture papier">
     <div class="wrapper">
       <div class="footer-wrapper">
         <div class="footer-top">

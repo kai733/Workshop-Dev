@@ -23,6 +23,8 @@ $our_friends = get_field(selector: "our_friends");
     </div>
 </div>
 <div class="quiz">
+    <img class="floating-img-top" src="<?php echo get_template_directory_uri(); ?>/assets/img/haut.png"
+        alt="Texture papier">
     <h2><?php echo $quiz["title"] ?></h2>
     <p><?php echo $quiz["description"] ?></p>
     <?php $counter = 0; ?>
@@ -82,6 +84,8 @@ $our_friends = get_field(selector: "our_friends");
         <a class="button-1"
             href="<?php echo $result_3["button"]["url"] ?>"><?php echo $result_3["button"]["title"] ?></a>
     </div>
+    <img class="floating-img-bottom" src="<?php echo get_template_directory_uri(); ?>/assets/img/bas.png"
+        alt="Texture papier">
 </div>
 <div class="about">
     <div class="wrapper">
