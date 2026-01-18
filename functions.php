@@ -17,6 +17,14 @@ add_action('wp_enqueue_scripts', 'add_style');
 function add_script()
 {
   wp_enqueue_script('main-js', get_template_directory_uri() . '/main.js', array(), false, true);
+  
+  // Enqueue category filter script on blog page
+  if (is_page('parlons-en')) {
+    wp_enqueue_script('category-filter', get_template_directory_uri() . '/assets/js/category-filter.js', array(), false, true);
+  }
+  
+  // Enqueue hamburger menu script globally
+  wp_enqueue_script('hamburger-menu', get_template_directory_uri() . '/assets/js/hamburger-menu.js', array(), false, true);
 }
 add_action('wp_enqueue_scripts', 'add_script');
 

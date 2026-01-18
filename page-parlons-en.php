@@ -13,6 +13,22 @@ get_header();
         <h2>Parlons-en !</h2>
     </div>
 
+    <div class="category-filters">
+        <button class="filter-btn active" data-category="all">Tous</button>
+        <?php
+        $categories = get_categories(array(
+            'taxonomy' => 'category',
+            'hide_empty' => true,
+        ));
+        
+        foreach ($categories as $category):
+        ?>
+            <button class="filter-btn" data-category="<?php echo esc_attr($category->slug); ?>">
+                <?php echo esc_html($category->name); ?>
+            </button>
+        <?php endforeach; ?>
+    </div>
+
     <div class="blog-grid">
         <?php
         $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
@@ -37,9 +53,18 @@ get_header();
                 $title = get_the_title();
                 $desc = get_field('description', $post_id);
                 $image = get_field('image', $post_id);
+                
+                // Get category slugs for filtering
+                $category_slugs = array();
+                if ($categories) {
+                    foreach ($categories as $cat) {
+                        $category_slugs[] = $cat->slug;
+                    }
+                }
+                $category_data = implode(',', $category_slugs);
                 ?>
 
-                <article class="blog-card">
+                <article class="blog-card" data-categories="<?php echo esc_attr($category_data); ?>">
                     <div class="blog-card-inner">
 
                         <div class="card-top">

@@ -22,6 +22,7 @@ body {
   margin: 0;
   scroll-behavior: smooth;
 
+
   h3 {
     /* h3 */
     font-family: "Clash Grotesk Variable";
@@ -124,6 +125,12 @@ body {
     line-height: 150%;
     /* 27px */
   }
+}
+
+/* Responsive images for all pages except home */
+body:not(.home) img {
+  max-width: 100%;
+  height: auto;
 }
 
 footer {
@@ -501,19 +508,30 @@ a {
   }
 }
 
+@media (max-width: 1380px) {
+  .floating-img-top {
+    display: none;
+  }
+
+  .floating-img-bottom {
+    display: none;
+  }
+}
+
 .about-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-top: 100px;
   padding-bottom: 100px;
+  flex-wrap: wrap;
 
   .about-left {
     display: flex;
     border-radius: 10px;
     overflow: hidden;
     z-index: 1;
-    height: 100%;
+    height: auto;
     align-items: center;
     justify-content: center;
   }
@@ -544,6 +562,8 @@ a {
   display: flex;
   justify-content: space-between;
   padding-bottom: 100px;
+  flex-wrap: wrap;
+  gap: 32px;
 
   h2 {
     margin: 10px 0;
@@ -592,6 +612,7 @@ a {
     .event-card {
       display: flex;
       gap: 40px;
+      flex-wrap: wrap;
 
       .event-card-1 {
         display: flex;
@@ -683,11 +704,14 @@ a {
   display: flex;
   flex-direction: column;
   padding-bottom: 100px;
+  flex-wrap: wrap;
 
   .blog-top {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 32px;
 
     .blog-top-left {
       display: flex;
@@ -761,6 +785,7 @@ a {
   display: flex;
   justify-content: space-between;
   padding-bottom: 100px;
+  flex-wrap: wrap;
 
   .our-friends-left {
     width: 414px;
@@ -770,6 +795,8 @@ a {
     display: flex;
     gap: 60px;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 32px;
 
     img {
       max-width: 140px;
@@ -805,7 +832,8 @@ a {
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
+    object-position: left top;
     z-index: -1;
   }
 
@@ -889,6 +917,7 @@ a {
         font-style: italic;
         font-weight: 200;
         line-height: normal;
+        text-wrap: wrap;
       }
     }
   }
@@ -897,7 +926,7 @@ a {
 .header {
   background-image: url("assets/img/header-bg.png");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: auto 100%;
   background-position: left bottom;
   padding-bottom: 50px;
 
@@ -1080,6 +1109,8 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 50px;
 
   h3 {
     margin-block: 0;
@@ -1220,6 +1251,8 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 32px;
 
   .agenda-card-1 {
     display: flex;
@@ -1430,6 +1463,7 @@ a {
       .about-card-links {
         display: flex;
         gap: 30px;
+        flex-wrap: wrap;
       }
     }
 
@@ -1437,8 +1471,8 @@ a {
       img {
         border-radius: 10px;
         display: flex;
-        width: 640px;
-        height: 390px;
+        width: 100%;
+        height: auto;
         justify-content: center;
         align-items: center;
         gap: 10px;
@@ -1510,6 +1544,8 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
 
     .ideas-card-left {
       max-width: 500px;
@@ -1524,8 +1560,8 @@ a {
       img {
         border-radius: 10px;
         display: flex;
-        width: 640px;
-        height: 390px;
+        width: 100%;
+        height: auto;
         justify-content: center;
         align-items: center;
         gap: 10px;
@@ -1615,8 +1651,8 @@ a {
       img {
         border-radius: 10px;
         display: flex;
-        width: 640px;
-        height: 390px;
+        width: 100%;
+        height: auto;
         justify-content: center;
         align-items: center;
         gap: 10px;
@@ -1766,7 +1802,6 @@ a {
         border-radius: 10px;
         display: flex;
         width: 640px;
-        height: 390px;
         justify-content: center;
         align-items: center;
         gap: 10px;
@@ -1932,8 +1967,8 @@ a {
       img {
         border-radius: 10px;
         display: flex;
-        width: 640px;
-        height: 390px;
+        width: 100%;
+        height: auto;
         justify-content: center;
         align-items: center;
         gap: 10px;
@@ -1968,6 +2003,7 @@ a {
     display: flex;
     justify-content: space-between;
     margin-top: 50px;
+    flex-wrap: wrap;
 
     a {
       color: #000;
@@ -2270,6 +2306,58 @@ a {
   }
 }
 
+/* Category Filter Styles */
+.category-filters {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.filter-btn {
+  font-family: "Clash Grotesk";
+  font-weight: 500;
+  display: flex;
+  padding: 9px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 25px;
+  background: transparent;
+  color: #353535;
+  border: solid 1px #353535;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.filter-btn:hover {
+  background: #353535;
+  color: #e7dccf;
+  border: solid 1px #353535;
+}
+
+.filter-btn.active {
+  background: #353535;
+  color: #faf5ef;
+  border: solid 1px #353535;
+}
+
+.blog-header {
+  margin-bottom: 30px;
+}
+
+.blog-header h2 {
+  text-align: center;
+  color: #353535;
+}
+
+/* Smooth transition for filtered cards */
+.blog-card {
+  transition: opacity 0.3s ease-in-out;
+}
+
 .card-image-wrapper {
   width: 100%;
   height: 168px;
@@ -2511,6 +2599,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 
     .history-card-left {
       display: flex;
@@ -2525,8 +2614,8 @@ a {
       img {
         border-radius: 10px;
         display: flex;
-        width: 640px;
-        height: 390px;
+        width: 100%;
+        height: auto;
         justify-content: center;
         align-items: center;
         gap: 10px;
@@ -2776,4 +2865,272 @@ a {
 .search-section ul li a:hover {
   background-color: #f5f5f5;
   border-color: #353535;
+}
+
+/* Hamburger Menu Styles */
+.hamburger-btn {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+  transition: all 0.3s ease;
+}
+
+.hamburger-btn span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #353535;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.hamburger-btn.active span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+.hamburger-btn.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-btn.active span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Mobile Navigation */
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: flex;
+  justify-content: flex-end;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.mobile-nav.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-nav-content {
+  width: 80%;
+  max-width: 400px;
+  height: 100%;
+  background-color: #e7dccf;
+  padding: 80px 40px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  overflow-y: auto;
+}
+
+.mobile-nav.active .mobile-nav-content {
+  transform: translateX(0);
+}
+
+.mobile-nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.mobile-nav-links a {
+  font-family: 'Clash Grotesk Variable', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #353535;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  padding: 8px 0;
+}
+
+.mobile-nav-links a:hover {
+  color: #4169d2;
+}
+
+.mobile-search {
+  display: flex;
+  background: #fff;
+  border-radius: 25px;
+  padding: 8px 20px;
+  border: 1px solid #353535;
+  align-items: center;
+  gap: 10px;
+}
+
+.mobile-search .search-field {
+  border: none;
+  background: transparent;
+  flex: 1;
+  outline: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  color: #353535;
+}
+
+.mobile-search .search-submit {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  color: #353535;
+}
+
+.mobile-search .search-submit svg {
+  width: 20px;
+  height: 20px;
+}
+
+@media (max-width: 1380px) {
+
+  .header-2,
+  .header-right {
+    display: none !important;
+  }
+
+  .hamburger-btn {
+    display: flex;
+  }
+
+  .footer-top {
+    flex-wrap: wrap;
+    gap: 50px;
+  }
+
+  .blog-bottom {
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+
+    .blog-card {
+      min-width: 400px;
+    }
+  }
+
+  .wrapper-our-friends {
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+  }
+
+  .offer-card {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .about-card {
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
+
+  .about-card:nth-child(even) {
+    flex-direction: column-reverse !important;
+    gap: 20px;
+  }
+
+  .manifest-card {
+    flex-direction: column-reverse !important;
+    gap: 20px;
+  }
+
+  .manifest-card:nth-child(even) {
+    flex-direction: column-reverse !important;
+    gap: 20px;
+  }
+
+  .reason-card {
+    flex-direction: column-reverse !important;
+    gap: 20px;
+  }
+
+  .reason-card:nth-child(even) {
+    flex-direction: column-reverse !important;
+    gap: 20px;
+  }
+
+  .blog-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+
+    .blog-card:nth-child(4) {
+      background-color: #353535;
+      color: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      padding: 30px 40px;
+
+      h3 {
+        color: #fff;
+        font-family: "Clash Grotesk Variable";
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 100%;
+        /* 32px */
+      }
+
+      p {
+        color: #fff;
+        font-family: Inter;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+  }
+
+  .newsletter-right {
+    display: none;
+  }
+
+  /* Intro Cards Carousel for Mobile */
+  .intro-wrapper {
+    justify-content: flex-start;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    /* Firefox */
+    padding-left: calc((100vw - 400px) / 2);
+    padding-right: calc((100vw - 400px) / 2);
+    gap: 32px;
+  }
+
+  .intro-wrapper::-webkit-scrollbar {
+    display: none;
+    /* Chrome/Safari */
+  }
+
+  .intro-wrapper .intro-card {
+    flex-shrink: 0;
+    scroll-snap-align: center;
+    width: 400px;
+  }
+
+  .intro-wrapper .intro-card:nth-child(2) {
+    height: 462px;
+    /* Match other cards height on mobile */
+  }
 }
