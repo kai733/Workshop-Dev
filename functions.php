@@ -143,21 +143,49 @@ function get_breadcrumb()
 {
   echo '<a href="' . home_url() . '" rel="nofollow">Accueil</a>';
 
-  if (is_category() || is_single()) {
-    echo "&nbsp;&nbsp;&#187;&nbsp;&nbsp;";
-    the_category(' &bull; ');
-    if (is_single()) {
-      echo " &nbsp;&nbsp;&#187;&nbsp;&nbsp; ";
+  if (is_home() || is_front_page()) {
+      return;
+  }
+
+  // Separator
+  $sep = ' &nbsp;&nbsp;&#187;&nbsp;&nbsp; ';
+
+  if (is_singular('post')) {
+      // For Blog Posts: Accueil >> Parlons en >> Title
+      // "Parlons en" page ID or slug. Assuming we can fallback to finding it or hardcoded slug if needed.
+      // Better to find the page by path 'parlons-en' ideally, or assume ID.
+      // Let's try to get page by path.
+      $parlons_en = get_page_by_path('parlons-en');
+      $parlons_en_link = $parlons_en ? get_permalink($parlons_en->ID) : home_url('/parlons-en');
+      
+      echo $sep;
+      echo '<a href="' . $parlons_en_link . '">Parlons en</a>';
+      echo $sep;
       the_title();
-    }
+
+  } elseif (is_singular('event')) {
+      // For Events: Accueil >> Agenda >> Title
+      $agenda = get_page_by_path('agenda');
+      $agenda_link = $agenda ? get_permalink($agenda->ID) : home_url('/agenda');
+
+      echo $sep;
+      echo '<a href="' . $agenda_link . '">Agenda</a>';
+      echo $sep;
+      the_title();
+
+  } elseif (is_category()) {
+      echo $sep;
+      the_category(' &bull; ');
+
   } elseif (is_page()) {
-    echo "&nbsp;&nbsp;/&nbsp;&nbsp;";
-    echo the_title();
+      echo $sep;
+      the_title();
+
   } elseif (is_search()) {
-    echo "&nbsp;&nbsp;&#187;&nbsp;&nbsp;Search Results for... ";
-    echo '"<em>';
-    echo the_search_query();
-    echo '</em>"';
+      echo $sep . "Search Results for... ";
+      echo '"<em>';
+      echo get_search_query();
+      echo '</em>"';
   }
 }
 
