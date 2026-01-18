@@ -25,7 +25,7 @@ body {
 
   h3 {
     /* h3 */
-    font-family: "Clash Grotesk Variable";
+    font-family: "Clash Grotesk";
     font-size: 32px;
     font-style: normal;
     font-weight: 700;
@@ -36,7 +36,7 @@ body {
 
   h2 {
     /* h2 */
-    font-family: "Clash Grotesk Variable";
+    font-family: "Clash Grotesk";
     font-size: 48px;
     font-style: normal;
     font-weight: 700;
@@ -45,7 +45,7 @@ body {
   }
 
   h1 {
-    font-family: "Clash Grotesk Variable";
+    font-family: "Clash Grotesk";
     font-size: 54px;
     font-style: normal;
     font-weight: 700;
@@ -74,7 +74,7 @@ body {
 
   h5 {
     color: #353535;
-    font-family: "Clash Grotesk Variable";
+    font-family: "Clash Grotesk";
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -84,7 +84,7 @@ body {
 
   label {
     /* label */
-    font-family: "Clash Grotesk Variable";
+    font-family: "Clash Grotesk";
     font-size: 12px;
     font-style: normal;
     font-weight: 500;
@@ -258,7 +258,7 @@ a {
       label {
         text-transform: uppercase;
         color: #e7dccf;
-        font-family: "Clash Grotesk Variable";
+        font-family: "Clash Grotesk";
         font-size: 12px;
         font-style: normal;
         font-weight: 500;
@@ -415,7 +415,7 @@ a {
         h4 {
           color: var(--blanc, #fff);
           text-align: center;
-          font-family: "Clash Grotesk Variable";
+          font-family: "Clash Grotesk";
           font-size: 28px;
           font-style: normal;
           font-weight: 700;
@@ -629,7 +629,7 @@ a {
         .month {
           font-size: 32px;
           text-align: center;
-          font-family: "Clash Grotesk Variable";
+          font-family: "Clash Grotesk";
           font-style: normal;
           font-weight: 700;
           line-height: 32px;
@@ -638,7 +638,7 @@ a {
         .number {
           font-size: 68px;
           text-align: center;
-          font-family: "Clash Grotesk Variable";
+          font-family: "Clash Grotesk";
           font-style: normal;
           font-weight: 700;
           line-height: 50px;
@@ -962,7 +962,7 @@ a {
 
     a {
       color: #353535;
-      font-family: "Clash Grotesk Variable";
+      font-family: "Clash Grotesk";
       font-size: 16px;
       font-style: normal;
       font-weight: 500;
@@ -1272,7 +1272,7 @@ a {
       .month {
         font-size: 32px;
         text-align: center;
-        font-family: "Clash Grotesk Variable";
+        font-family: "Clash Grotesk";
         font-style: normal;
         font-weight: 700;
         line-height: 32px;
@@ -1281,7 +1281,7 @@ a {
       .number {
         font-size: 68px;
         text-align: center;
-        font-family: "Clash Grotesk Variable";
+        font-family: "Clash Grotesk";
         font-style: normal;
         font-weight: 700;
         line-height: 50px;
@@ -1293,7 +1293,7 @@ a {
         display: flex;
         font-size: 32px;
         text-align: center;
-        font-family: "Clash Grotesk Variable";
+        font-family: "Clash Grotesk";
         font-style: normal;
         font-weight: 700;
         line-height: 32px;
@@ -1420,7 +1420,7 @@ a {
   h4 {
     color: var(--gris, #353535);
     text-align: center;
-    font-family: "Clash Grotesk Variable";
+    font-family: "Clash Grotesk";
     font-size: 32px;
     font-style: normal;
     font-weight: 700;
@@ -1429,7 +1429,7 @@ a {
 
   h3 {
     color: #353535;
-    font-family: "Clash Grotesk Variable";
+    font-family: "Clash Grotesk";
     font-size: 48px;
     font-style: normal;
     font-weight: 700;
@@ -1439,7 +1439,7 @@ a {
 
   h2 {
     color: #353535;
-    font-family: "Clash Grotesk Variable";
+    font-family: "Clash Grotesk";
     font-size: 64px;
     font-style: normal;
     font-weight: 700;
@@ -1512,7 +1512,7 @@ a {
   h4 {
     color: var(--gris, #353535);
     text-align: center;
-    font-family: "Clash Grotesk Variable";
+    font-family: "Clash Grotesk";
     font-size: 32px;
     font-style: normal;
     font-weight: 700;
@@ -1521,7 +1521,7 @@ a {
 
   h3 {
     color: #353535;
-    font-family: "Clash Grotesk Variable";
+    font-family: "Clash Grotesk";
     font-size: 48px;
     font-style: normal;
     font-weight: 700;
@@ -1531,7 +1531,7 @@ a {
 
   h2 {
     color: #353535;
-    font-family: "Clash Grotesk Variable";
+    font-family: "Clash Grotesk";
     font-size: 64px;
     font-style: normal;
     font-weight: 700;
@@ -1601,7 +1601,7 @@ a {
   h4 {
     color: var(--gris, #353535);
     text-align: center;
-    font-family: "Clash Grotesk Variable";
+    font-family: "Clash Grotesk";
     font-size: 32px;
     font-style: normal;
     font-weight: 700;
@@ -1610,7 +1610,7 @@ a {
 
   h3 {
     color: #353535;
-    font-family: "Clash Grotesk Variable";
+    font-family: "Clash Grotesk";
     font-size: 48px;
     font-style: normal;
     font-weight: 700;
@@ -1620,7 +1620,7 @@ a {
 
   h2 {
     color: #353535;
-    font-family: "Clash Grotesk Variable";
+    font-family: "Clash Grotesk";
     font-size: 64px;
     font-style: normal;
     font-weight: 700;
@@ -1695,7 +1695,7 @@ a {
     h4 {
       color: var(--gris, #353535);
       text-align: center;
-      font-family: "Clash Grotesk Variable";
+      font-family: "Clash Grotesk";
       font-size: 32px;
       font-style: normal;
       font-weight: 700;
@@ -1704,7 +1704,7 @@ a {
 
     h3 {
       color: #353535;
-      font-family: "Clash Grotesk Variable";
+      font-family: "Clash Grotesk";
       font-size: 48px;
       font-style: normal;
       font-weight: 700;
@@ -1714,7 +1714,7 @@ a {
 
     h2 {
       color: #353535;
-      font-family: "Clash Grotesk Variable";
+      font-family: "Clash Grotesk";
       font-size: 64px;
       font-style: normal;
       font-weight: 700;
@@ -1756,7 +1756,7 @@ a {
   h4 {
     color: var(--gris, #353535);
     text-align: center;
-    font-family: "Clash Grotesk Variable";
+    font-family: "Clash Grotesk";
     font-size: 32px;
     font-style: normal;
     font-weight: 700;
@@ -1765,7 +1765,7 @@ a {
 
   h3 {
     color: #353535;
-    font-family: "Clash Grotesk Variable";
+    font-family: "Clash Grotesk";
     font-size: 48px;
     font-style: normal;
     font-weight: 700;
@@ -1775,7 +1775,7 @@ a {
 
   h2 {
     color: #353535;
-    font-family: "Clash Grotesk Variable";
+    font-family: "Clash Grotesk";
     font-size: 64px;
     font-style: normal;
     font-weight: 700;
@@ -1842,7 +1842,7 @@ a {
   h4 {
     color: var(--gris, #353535);
     text-align: center;
-    font-family: "Clash Grotesk Variable";
+    font-family: "Clash Grotesk";
     font-size: 32px;
     font-style: normal;
     font-weight: 700;
@@ -1851,7 +1851,7 @@ a {
 
   h3 {
     color: #353535;
-    font-family: "Clash Grotesk Variable";
+    font-family: "Clash Grotesk";
     font-size: 48px;
     font-style: normal;
     font-weight: 700;
@@ -1861,7 +1861,7 @@ a {
 
   h2 {
     color: #353535;
-    font-family: "Clash Grotesk Variable";
+    font-family: "Clash Grotesk";
     font-size: 64px;
     font-style: normal;
     font-weight: 700;
@@ -1926,7 +1926,7 @@ a {
   h4 {
     color: var(--gris, #353535);
     text-align: center;
-    font-family: "Clash Grotesk Variable";
+    font-family: "Clash Grotesk";
     font-size: 32px;
     font-style: normal;
     font-weight: 700;
@@ -1935,7 +1935,7 @@ a {
 
   h3 {
     color: #353535;
-    font-family: "Clash Grotesk Variable";
+    font-family: "Clash Grotesk";
     font-size: 48px;
     font-style: normal;
     font-weight: 700;
@@ -1945,7 +1945,7 @@ a {
 
   h2 {
     color: #353535;
-    font-family: "Clash Grotesk Variable";
+    font-family: "Clash Grotesk";
     font-size: 64px;
     font-style: normal;
     font-weight: 700;
@@ -1981,7 +1981,7 @@ a {
 .joinUsTop {
   h5 {
     color: #000;
-    font-family: "Clash Grotesk Variable";
+    font-family: "Clash Grotesk";
     font-size: 20px;
     font-style: normal;
     font-weight: 600;
@@ -1992,7 +1992,7 @@ a {
 
   p {
     color: #000;
-    font-family: "Clash Grotesk Variable";
+    font-family: "Clash Grotesk";
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
@@ -2007,7 +2007,7 @@ a {
 
     a {
       color: #000;
-      font-family: "Clash Grotesk Variable";
+      font-family: "Clash Grotesk";
       font-size: 20px;
       font-style: normal;
       font-weight: 400;
@@ -2152,7 +2152,7 @@ a {
         .month {
           font-size: 32px;
           text-align: center;
-          font-family: "Clash Grotesk Variable";
+          font-family: "Clash Grotesk";
           font-style: normal;
           font-weight: 700;
           line-height: 32px;
@@ -2161,7 +2161,7 @@ a {
         .number {
           font-size: 68px;
           text-align: center;
-          font-family: "Clash Grotesk Variable";
+          font-family: "Clash Grotesk";
           font-style: normal;
           font-weight: 700;
           line-height: 50px;
@@ -2173,7 +2173,7 @@ a {
           display: flex;
           font-size: 32px;
           text-align: center;
-          font-family: "Clash Grotesk Variable";
+          font-family: "Clash Grotesk";
           font-style: normal;
           font-weight: 700;
           line-height: 32px;
@@ -2234,7 +2234,7 @@ a {
 
   h3 {
     color: #e7dccf;
-    font-family: "Clash Grotesk Variable";
+    font-family: "Clash Grotesk";
     font-size: 32px;
     font-style: normal;
     font-weight: 700;
@@ -2279,7 +2279,7 @@ a {
   .badge {
     text-transform: uppercase;
     color: #e7dccf;
-    font-family: "Clash Grotesk Variable";
+    font-family: "Clash Grotesk";
     font-size: 12px;
     font-style: normal;
     font-weight: 500;
@@ -2378,7 +2378,7 @@ a {
 
   h3 {
     color: #353535;
-    font-family: "Clash Grotesk Variable";
+    font-family: "Clash Grotesk";
     font-size: 32px;
     font-style: normal;
     font-weight: 700;
@@ -2557,7 +2557,7 @@ a {
   h4 {
     color: var(--gris, #353535);
     text-align: center;
-    font-family: "Clash Grotesk Variable";
+    font-family: "Clash Grotesk";
     font-size: 32px;
     font-style: normal;
     font-weight: 700;
@@ -2566,7 +2566,7 @@ a {
 
   h3 {
     color: #353535;
-    font-family: "Clash Grotesk Variable";
+    font-family: "Clash Grotesk";
     font-size: 48px;
     font-style: normal;
     font-weight: 700;
@@ -2576,7 +2576,7 @@ a {
 
   h2 {
     color: #353535;
-    font-family: "Clash Grotesk Variable";
+    font-family: "Clash Grotesk";
     font-size: 64px;
     font-style: normal;
     font-weight: 700;
@@ -2649,7 +2649,7 @@ a {
 
   h1 {
     color: #353535;
-    font-family: "Clash Grotesk Variable";
+    font-family: "Clash Grotesk";
     font-size: 64px;
     font-style: normal;
     font-weight: 700;
@@ -2660,7 +2660,7 @@ a {
 
   h2 {
     color: #353535;
-    font-family: "Clash Grotesk Variable";
+    font-family: "Clash Grotesk";
     font-size: 54px;
     font-style: normal;
     font-weight: 700;
@@ -2671,7 +2671,7 @@ a {
 
   h3 {
     color: #353535;
-    font-family: "Clash Grotesk Variable";
+    font-family: "Clash Grotesk";
     font-size: 44px;
     font-style: normal;
     font-weight: 700;
@@ -2681,7 +2681,7 @@ a {
 
   h4 {
     color: #353535;
-    font-family: "Clash Grotesk Variable";
+    font-family: "Clash Grotesk";
     font-size: 34px;
     font-style: normal;
     font-weight: 700;
@@ -2691,7 +2691,7 @@ a {
 
   h5 {
     color: #353535;
-    font-family: "Clash Grotesk Variable";
+    font-family: "Clash Grotesk";
     font-style: normal;
     font-size: 24px;
     font-weight: 700;
@@ -2702,7 +2702,7 @@ a {
 
   h6 {
     color: #353535;
-    font-family: "Clash Grotesk Variable";
+    font-family: "Clash Grotesk";
     font-style: normal;
     font-size: 14px;
     font-weight: 700;
@@ -2831,7 +2831,7 @@ a {
 }
 
 .search-section h2 {
-  font-family: "Clash Grotesk Variable";
+  font-family: "Clash Grotesk";
   color: #353535;
   font-size: 48px;
   margin-bottom: 40px;
@@ -2949,7 +2949,7 @@ a {
 }
 
 .mobile-nav-links a {
-  font-family: 'Clash Grotesk Variable', sans-serif;
+  font-family: 'Clash Grotesk', sans-serif;
   font-size: 24px;
   font-weight: 600;
   color: #353535;
@@ -3081,7 +3081,7 @@ a {
 
       h3 {
         color: #fff;
-        font-family: "Clash Grotesk Variable";
+        font-family: "Clash Grotesk";
         font-size: 32px;
         font-style: normal;
         font-weight: 700;
