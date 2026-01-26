@@ -1,6 +1,6 @@
 # Workshop SAE
 
-**Workshop SAE** est un thème WordPress sur mesure développé pour l'association Emanciper. Designé par des étudiants en 2ème année de MMI.
+**Workshop SAE** est un thème WordPress sur mesure développé pour l'association [Emanciper](https://site.emanciper.org). Designé par des étudiants en 2ème année de MMI.
 
 ## Fonctionnalités Principales
 
